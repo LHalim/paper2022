@@ -42,7 +42,7 @@ Global Grid Info
      number of nodes            : 185
  
    boundary info for boundary6
-     boundary condition         : symmetry_y (6662)
+     boundary condition         : tangency (3000)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 182
@@ -104,7 +104,7 @@ Info for Grid Partition 1
      number of nodes            : 185
  
    boundary info for boundary 6
-     boundary condition         : symmetry_y (6662)
+     boundary condition         : tangency (3000)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 182

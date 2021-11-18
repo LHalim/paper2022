@@ -4,11 +4,11 @@ nx = 11
 ny = 11
 nz = 2
 
-x_min = 3.0
-x_max = 10.0 #m
-y_min = -10.0
-y_max = 1.5 #m
-z_min = -4.25
+x_min = 0.0
+x_max = 1.0 #m
+y_min = 0.0
+y_max = 1.0 #m
+z_min = -0.25
 z_max = 0.0 #m
 
 x = np.linspace(x_min, x_max, num = nx)
