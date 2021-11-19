@@ -50,7 +50,6 @@ freeze_limiter_iteration = 1
   slice_location(:) = 2.5
 /
 &boundary_output_variables
-  export_to ='vtk'
   number_of_boundaries = -1
   boundary_list        = '1-6'
   temperature          = .true.
