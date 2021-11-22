@@ -1,0 +1,98 @@
+FUN3D 13.6-c04c9a5b80 Flow started 11/22/2021 at 10:57:35 with 1 processes
+Contents of fun3d.nml file below------------------------
+&project
+  project_rootname = 'coarse2'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ loading design ...
+ Preparing to read binary AFLR3 grid: coarse2.lb8.ugrid
+ error opening coarse2.lb8.ugrid
+ Preparing to read binary AFLR3 grid: coarse2.b8.ugrid
+ 
+  nnodes              4033
+  ntface,nqface       680 1120
+  ntet,npyr,nprz,nhex 1565 0 5992 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.12508910E-03,  0.55095755E-02,  143.499543155
+cell statistics:  prz,  0.74318621E-07,  0.18263243E-02,   94.999998401
+cell statistics:  all,  0.74318621E-07,  0.55095755E-02,  143.499543155
+
+     ... Constructing partition node sets for level-0...                  7557 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to coarse2.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    240.36    240.36
+  NOTE: kappa_umuscl set by grid: .50
+ 
+ Grid read complete
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  
+  Use of a smooth (differentiable) flux limiter detected
+  Examining the grid to compute the reference length....
+  The grid based limiter reference length is 
+ (5.976520003254333E-002,0.000000000000000E+000)
+  
+ 
+ Computing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 

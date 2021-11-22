@@ -1,0 +1,2463 @@
+FUN3D 13.6-c04c9a5b80 Flow started 11/22/2021 at 10:50:49 with 1 processes
+Contents of fun3d.nml file below------------------------
+&project
+  project_rootname = 'coarse2'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ loading design ...
+ Preparing to read binary AFLR3 grid: coarse2.lb8.ugrid
+ error opening coarse2.lb8.ugrid
+ Preparing to read binary AFLR3 grid: coarse2.b8.ugrid
+ 
+  nnodes              4033
+  ntface,nqface       680 1120
+  ntet,npyr,nprz,nhex 1565 0 5992 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.12508910E-03,  0.55095755E-02,  143.499543155
+cell statistics:  prz,  0.74318621E-07,  0.18263243E-02,   94.999998401
+cell statistics:  all,  0.74318621E-07,  0.55095755E-02,  143.499543155
+
+     ... Constructing partition node sets for level-0...                  7557 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to coarse2.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    169.34    169.34
+ Grid Motion Type 
+   deform
+ 
+  NOTE: kappa_umuscl set by grid: .50
+ 
+ Grid read complete
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+  
+  Use of a smooth (differentiable) flux limiter detected
+  Examining the grid to compute the reference length....
+  The grid based limiter reference length is   5.976520003254334E-002
+  
+ 
+ Computing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ Done.
+[0] Creating TACSAssembler with numOwnedNodes = 242 numElements = 100
+[0] BCSRMat: ILU(1000000) Input fill ratio 10.00, actual fill ratio: 2.28, nnz(ILU) = 8780
+Transfer scheme [0]: Creating scheme of type MELDThermal...
+FUN3D 13.6-c04c9a5b80 Flow started 11/22/2021 at 10:50:51 with 1 processes
+Contents of fun3d.nml file below------------------------
+&project
+  project_rootname = 'coarse2'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ loading design ...
+ Preparing to read binary AFLR3 grid: coarse2.lb8.ugrid
+ error opening coarse2.lb8.ugrid
+ Preparing to read binary AFLR3 grid: coarse2.b8.ugrid
+ 
+  nnodes              4033
+  ntface,nqface       680 1120
+  ntet,npyr,nprz,nhex 1565 0 5992 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.12508910E-03,  0.55095755E-02,  143.499543155
+cell statistics:  prz,  0.74318621E-07,  0.18263243E-02,   94.999998401
+cell statistics:  all,  0.74318621E-07,  0.55095755E-02,  143.499543155
+
+     ... Constructing partition node sets for level-0...                  7557 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to coarse2.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    275.31    275.31
+  NOTE: kappa_umuscl set by grid: .50
+ 
+ Grid read complete
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+  
+  Use of a smooth (differentiable) flux limiter detected
+  Examining the grid to compute the reference length....
+  The grid based limiter reference length is   5.976520003254334E-002
+  
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ 
+ Begin Mesh Movement, Time Step 1   (Current Step 1)
+ Solving linear elasticity equations for mesh deformation
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ Iter            density_RMS  density_MAX   X-location   Y-location   Z-location
+    1  0.221299547465918E-03  0.23705E-02  0.30000E+01 -0.17498E+00  0.50000E+00
+       Lift  0.319945261684448E-02         Drag  0.150421449012296E+00
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 1
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 2   (Current Step 2)
+ Solving linear elasticity equations for mesh deformation
+   Info: restarting elasticity solver
+     Initial values for solution taken as final values from previous step
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    2  0.624596735293562E-04  0.27896E-03  0.24201E+01 -0.18065E+00  0.64764E+00
+       Lift  0.316053517359339E-02         Drag  0.136997728440689E+00
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 2
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 3   (Current Step 3)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    3  0.243616433765748E-04  0.15193E-03  0.10574E+01 -0.70105E+00  0.52142E+00
+       Lift  0.140893046611032E-02         Drag  0.822075627540375E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 3
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 4   (Current Step 4)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    4  0.214342067475754E-04  0.11289E-03  0.36312E+01 -0.70941E+00  0.70997E+00
+       Lift  0.577832819944528E-03         Drag  0.551014904093710E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 4
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 5   (Current Step 5)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    5  0.156799880946634E-04  0.10459E-03  0.36913E+01 -0.69575E+00  0.45459E+00
+       Lift  0.275264855495006E-03         Drag  0.507620065744007E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 5
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 6   (Current Step 6)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    6  0.883175755258268E-05  0.98336E-04  0.10574E+01 -0.70105E+00  0.52142E+00
+       Lift  0.120270068539023E-03         Drag  0.567340379462876E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 6
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 7   (Current Step 7)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    7  0.848950999619800E-05  0.66071E-04  0.10000E+01 -0.49993E-04  0.75000E+00
+       Lift -0.557647568682813E-04         Drag  0.609166364921849E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 7
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 8   (Current Step 8)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    8  0.684575283810970E-05  0.56698E-04  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift -0.329098146462532E-03         Drag  0.611965908077647E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 8
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 9   (Current Step 9)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    9  0.458897050623729E-05  0.43084E-04  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift -0.457091812929735E-03         Drag  0.611927732024499E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 9
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 10   (Current Step 10)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   10  0.451559393939347E-05  0.36702E-04  0.10574E+01 -0.70105E+00  0.52142E+00
+       Lift -0.222232726637924E-03         Drag  0.625629018451691E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 10
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 11   (Current Step 11)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   11  0.378379330994149E-05  0.30766E-04  0.99112E+00 -0.38394E+00  0.36043E+00
+       Lift  0.218558066149606E-03         Drag  0.640151038976677E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 11
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 12   (Current Step 12)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   12  0.277982518559099E-05  0.33158E-04  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift  0.477127161309178E-03         Drag  0.638630811573821E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 12
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 13   (Current Step 13)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   13  0.272212930768351E-05  0.19717E-04  0.76768E+00 -0.41560E+00  0.59811E+00
+       Lift  0.387023326313542E-03         Drag  0.622706787225655E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 13
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 14   (Current Step 14)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   14  0.229736470345683E-05  0.19003E-04  0.15684E+01 -0.26630E+00  0.17031E+00
+       Lift  0.143686077631387E-03         Drag  0.608642959539700E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 14
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 15   (Current Step 15)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   15  0.178458201449255E-05  0.15704E-04  0.13894E+01 -0.25076E+00  0.82170E+00
+       Lift  0.822234984094187E-05         Drag  0.608471258101029E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 15
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 16   (Current Step 16)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   16  0.182570656977220E-05  0.14268E-04  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift  0.489062744207707E-04         Drag  0.619168897500915E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 16
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 17   (Current Step 17)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   17  0.162988943453634E-05  0.11998E-04  0.76768E+00 -0.41560E+00  0.59811E+00
+       Lift  0.132773442076536E-03         Drag  0.630051823034604E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 17
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 18   (Current Step 18)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   18  0.127516148341860E-05  0.13301E-04  0.15684E+01 -0.26630E+00  0.17031E+00
+       Lift  0.130029489039184E-03         Drag  0.633963483423040E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 18
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 19   (Current Step 19)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   19  0.117036669842799E-05  0.90475E-05  0.61531E+00 -0.21622E+00  0.38762E+00
+       Lift  0.496975257297046E-04         Drag  0.631089357460143E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 19
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 20   (Current Step 20)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   20  0.103858095699032E-05  0.86322E-05  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift -0.175689379996736E-04         Drag  0.625605985888989E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 20
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 21   (Current Step 21)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   21  0.870455367026213E-06  0.74966E-05  0.76768E+00 -0.41560E+00  0.59811E+00
+       Lift -0.283757383537738E-04         Drag  0.621108688354381E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 21
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 22   (Current Step 22)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   22  0.816012459465293E-06  0.70927E-05  0.15684E+01 -0.26630E+00  0.17031E+00
+       Lift -0.155350971595445E-04         Drag  0.618922463799738E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 22
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 23   (Current Step 23)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   23  0.726650836963617E-06  0.57540E-05  0.13894E+01 -0.25076E+00  0.82170E+00
+       Lift -0.266777531235803E-04         Drag  0.618944950620271E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 23
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 24   (Current Step 24)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   24  0.612176088783133E-06  0.60579E-05  0.11478E+01 -0.23099E+00  0.15493E+00
+       Lift -0.632826940685400E-04         Drag  0.620496096058528E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 24
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 25   (Current Step 25)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   25  0.564680098763596E-06  0.43092E-05  0.19819E+01 -0.30250E+00  0.50000E+00
+       Lift -0.888890666926595E-04         Drag  0.622536908507120E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 25
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 26   (Current Step 26)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   26  0.505928133156088E-06  0.40936E-05  0.10574E+01 -0.70105E+00  0.52142E+00
+       Lift -0.753659839760826E-04         Drag  0.623837375845126E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 26
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 27   (Current Step 27)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   27  0.432329033607625E-06  0.32149E-05  0.32356E+01 -0.10000E+01  0.77028E+00
+       Lift -0.320666358121878E-04         Drag  0.623636136087626E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 27
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 28   (Current Step 28)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   28  0.403635542172533E-06  0.31514E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.976317064018429E-05         Drag  0.622110970751502E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 28
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 29   (Current Step 29)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   29  0.382073317700756E-06  0.31810E-05  0.19819E+01 -0.30250E+00  0.50000E+00
+       Lift  0.284783340068360E-04         Drag  0.620221722899628E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 29
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 30   (Current Step 30)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   30  0.342257921232287E-06  0.36268E-05  0.15684E+01 -0.26630E+00  0.17031E+00
+       Lift  0.254826815139340E-04         Drag  0.618985996584049E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 30
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 31   (Current Step 31)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   31  0.302763821919472E-06  0.31196E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.159077403653505E-04         Drag  0.618841896989480E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 31
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 32   (Current Step 32)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   32  0.264523406495513E-06  0.32691E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.123786790623481E-04         Drag  0.619519605606903E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 32
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 33   (Current Step 33)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   33  0.232982495131877E-06  0.33713E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.176196835899363E-04         Drag  0.620397239122507E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 33
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 34   (Current Step 34)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   34  0.216005560498697E-06  0.33351E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.271071217717542E-04         Drag  0.620939165185240E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 34
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 35   (Current Step 35)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   35  0.199549120336993E-06  0.31552E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.349818930339872E-04         Drag  0.620943258484932E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 35
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 36   (Current Step 36)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   36  0.177979997135382E-06  0.28657E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.375432951044573E-04         Drag  0.620532309123160E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 36
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 37   (Current Step 37)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   37  0.159382906769181E-06  0.25098E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.338240142720386E-04         Drag  0.620006605221132E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 37
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 38   (Current Step 38)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   38  0.143524368858065E-06  0.21268E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.252033716565557E-04         Drag  0.619659017825702E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 38
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 39   (Current Step 39)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   39  0.127681879276858E-06  0.17566E-05  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift  0.145636856474281E-04         Drag  0.619643339291575E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 39
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 40   (Current Step 40)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   40  0.114388848206815E-06  0.15855E-05  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift  0.511484793096499E-05         Drag  0.619921506147373E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 40
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 41   (Current Step 41)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   41  0.104420220617565E-06  0.15052E-05  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.101732808145568E-05         Drag  0.620315349878474E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 41
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 42   (Current Step 42)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   42  0.964615074237476E-07  0.13645E-05  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.368401995173407E-05         Drag  0.620622791203606E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 42
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 43   (Current Step 43)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   43  0.897210795579605E-07  0.11938E-05  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.444392108663831E-05         Drag  0.620729364309964E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 43
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 44   (Current Step 44)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   44  0.829615443323506E-07  0.10271E-05  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.527156609595590E-05         Drag  0.620647616561486E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 44
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 45   (Current Step 45)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   45  0.759968009376351E-07  0.88795E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.729478993138828E-05         Drag  0.620485264621353E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 45
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 46   (Current Step 46)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   46  0.697790183252427E-07  0.77951E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.103180138373291E-04         Drag  0.620364675433332E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 46
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 47   (Current Step 47)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   47  0.647251175321558E-07  0.69115E-06  0.21425E+01 -0.58906E+00  0.18054E+00
+       Lift -0.132616502356909E-04         Drag  0.620356434118616E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 47
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 48   (Current Step 48)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   48  0.611650315271855E-07  0.63089E-06  0.21425E+01 -0.58906E+00  0.18054E+00
+       Lift -0.150271342381915E-04         Drag  0.620455816070917E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 48
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 49   (Current Step 49)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   49  0.592688804825729E-07  0.57769E-06  0.27811E+01 -0.37275E+00  0.41027E+00
+       Lift -0.151967951418816E-04         Drag  0.620603758608849E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 49
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 50   (Current Step 50)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   50  0.578599880356344E-07  0.59152E-06  0.27811E+01 -0.37275E+00  0.41027E+00
+       Lift -0.141100544618284E-04         Drag  0.620727272199705E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 50
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 51   (Current Step 51)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   51  0.555006479860837E-07  0.53743E-06  0.26770E+01 -0.68426E+00  0.58962E+00
+       Lift -0.125666995436874E-04         Drag  0.620780667742952E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 51
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 52   (Current Step 52)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   52  0.520632021902551E-07  0.54744E-06  0.26770E+01 -0.68426E+00  0.58962E+00
+       Lift -0.113509575387255E-04         Drag  0.620761074317372E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 52
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 53   (Current Step 53)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   53  0.485619672330973E-07  0.54147E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.108820104764579E-04         Drag  0.620700862502265E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 53
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 54   (Current Step 54)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   54  0.460694581683013E-07  0.55177E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.111141030452901E-04         Drag  0.620643690934488E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 54
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 55   (Current Step 55)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   55  0.448273604470939E-07  0.54700E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.117027371573265E-04         Drag  0.620620125572474E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 55
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 56   (Current Step 56)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   56  0.442135260688774E-07  0.52991E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.122081040964398E-04         Drag  0.620634008124370E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 56
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 57   (Current Step 57)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   57  0.434661029418564E-07  0.50633E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.123490570053396E-04         Drag  0.620667429281265E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 57
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 58   (Current Step 58)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   58  0.421766716613625E-07  0.48225E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.121078960464087E-04         Drag  0.620694243732810E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 58
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 59   (Current Step 59)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   59  0.403806718711969E-07  0.46075E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.116799667268550E-04         Drag  0.620695699361503E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 59
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 60   (Current Step 60)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   60  0.384576524680682E-07  0.44131E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.113184345588378E-04         Drag  0.620668585340814E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 60
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 61   (Current Step 61)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   61  0.368674919576296E-07  0.42088E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.112002558250532E-04         Drag  0.620623681675323E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 61
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 62   (Current Step 62)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   62  0.357813371813381E-07  0.40749E-06  0.30870E+01 -0.66966E+00  0.24734E+00
+       Lift -0.113203863359711E-04         Drag  0.620577083520559E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 62
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 63   (Current Step 63)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   63  0.350077811562370E-07  0.38556E-06  0.30870E+01 -0.66966E+00  0.24734E+00
+       Lift -0.115420191125673E-04         Drag  0.620541629369374E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 63
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 64   (Current Step 64)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   64  0.342108143322439E-07  0.37093E-06  0.37029E+01 -0.45298E+00  0.57284E+00
+       Lift -0.116960051831747E-04         Drag  0.620521006654566E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 64
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 65   (Current Step 65)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   65  0.331832142137288E-07  0.35725E-06  0.37029E+01 -0.45298E+00  0.57284E+00
+       Lift -0.116756376063899E-04         Drag  0.620510203708514E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 65
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 66   (Current Step 66)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   66  0.319238997166809E-07  0.34040E-06  0.37029E+01 -0.45298E+00  0.57284E+00
+       Lift -0.114780591655821E-04         Drag  0.620500147583321E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 66
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 67   (Current Step 67)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   67  0.305742463482884E-07  0.33327E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.111959834613368E-04         Drag  0.620483292551855E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 67
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 68   (Current Step 68)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   68  0.293050345683599E-07  0.34615E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.109393940318062E-04         Drag  0.620457171591678E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 68
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 69   (Current Step 69)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   69  0.282398624070102E-07  0.35205E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.107847763999689E-04         Drag  0.620424917043693E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 69
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 70   (Current Step 70)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   70  0.273831111002804E-07  0.35102E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.107456210594101E-04         Drag  0.620392326099046E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 70
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 71   (Current Step 71)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   71  0.266353176905129E-07  0.34440E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.107781106678720E-04         Drag  0.620364456196694E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 71
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 72   (Current Step 72)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   72  0.258759475042511E-07  0.33400E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.108136944604679E-04         Drag  0.620343300381696E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 72
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 73   (Current Step 73)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   73  0.250436986320144E-07  0.32131E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.108069421388981E-04         Drag  0.620327368573202E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 73
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 74   (Current Step 74)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   74  0.241516505047972E-07  0.30730E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.107450163370665E-04         Drag  0.620313248834969E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 74
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 75   (Current Step 75)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   75  0.232670864019708E-07  0.29191E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.106516287334806E-04         Drag  0.620297924602441E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 75
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 76   (Current Step 76)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   76  0.224619383357175E-07  0.27484E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.105676503539892E-04         Drag  0.620280083491074E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 76
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 77   (Current Step 77)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   77  0.217747652096404E-07  0.25594E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.105248703642489E-04         Drag  0.620260459793356E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 77
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 78   (Current Step 78)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   78  0.211965450188935E-07  0.23549E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.105315000840000E-04         Drag  0.620240997681371E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 78
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 79   (Current Step 79)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   79  0.206843505802653E-07  0.21416E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.105734790885316E-04         Drag  0.620223579359585E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 79
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 80   (Current Step 80)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   80  0.201919247208293E-07  0.19283E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.106246322998956E-04         Drag  0.620209147895718E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 80
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 81   (Current Step 81)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   81  0.196971482406719E-07  0.17212E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.106700879293213E-04         Drag  0.620197248533854E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 81
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 82   (Current Step 82)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   82  0.192037834874359E-07  0.15264E-06  0.33920E+01 -0.56681E+00  0.53928E+00
+       Lift -0.107032034683007E-04         Drag  0.620186638592333E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 82
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 83   (Current Step 83)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   83  0.187310211989065E-07  0.14270E-06  0.29874E+01 -0.32923E+00  0.50000E+00
+       Lift -0.107313997547944E-04         Drag  0.620176166414777E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 83
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 84   (Current Step 84)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   84  0.182983487024084E-07  0.13396E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.107709871299097E-04         Drag  0.620165176030826E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 84
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 85   (Current Step 85)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   85  0.179126092449977E-07  0.13395E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.108354653836033E-04         Drag  0.620153779916656E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 85
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 86   (Current Step 86)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   86  0.175664403582414E-07  0.13271E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.109287577711214E-04         Drag  0.620142611458021E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 86
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 87   (Current Step 87)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   87  0.172439316599841E-07  0.13062E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.110451971618007E-04         Drag  0.620132359971743E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 87
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 88   (Current Step 88)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   88  0.169296382439272E-07  0.12791E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.111739445483726E-04         Drag  0.620123391522586E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 88
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 89   (Current Step 89)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   89  0.166152192400813E-07  0.12464E-06  0.37963E+01 -0.10000E+01  0.53564E+00
+       Lift -0.113046744324645E-04         Drag  0.620115626283846E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 89
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 90   (Current Step 90)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   90  0.163006453681359E-07  0.12424E-06  0.36882E+01 -0.38984E+00  0.41246E+00
+       Lift -0.114299808543924E-04         Drag  0.620108760801244E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 90
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 91   (Current Step 91)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   91  0.159899127208329E-07  0.12604E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.115518163598629E-04         Drag  0.620102196496883E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 91
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 92   (Current Step 92)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   92  0.156925081617072E-07  0.12746E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.116718740937959E-04         Drag  0.620095551870287E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 92
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 93   (Current Step 93)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   93  0.154050198026445E-07  0.12838E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.117914052765689E-04         Drag  0.620088855630717E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 93
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 94   (Current Step 94)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   94  0.151254898411367E-07  0.12874E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.119110691381876E-04         Drag  0.620082297533407E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 94
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 95   (Current Step 95)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   95  0.148505106393651E-07  0.12853E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.120275477326147E-04         Drag  0.620076148975559E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 95
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 96   (Current Step 96)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   96  0.145770984175227E-07  0.12780E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.121343969715406E-04         Drag  0.620070575053314E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 96
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 97   (Current Step 97)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   97  0.143031794748949E-07  0.12659E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.122254728972135E-04         Drag  0.620065542554132E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 97
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 98   (Current Step 98)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   98  0.140282412432744E-07  0.12496E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.122973480746615E-04         Drag  0.620060869708303E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 98
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 99   (Current Step 99)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   99  0.137533513749854E-07  0.12293E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.123496480558143E-04         Drag  0.620056351684521E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 99
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 100   (Current Step 100)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+  100  0.134803829932991E-07  0.12052E-06  0.37964E+01 -0.39937E+00  0.70959E+00
+       Lift -0.123833806829784E-04         Drag  0.620051960284735E-01
+ 
+ Writing coarse2.flow (version 12.2)
+  inserting current history iterations 100
+ Time for write: .0 s
+ 
+ Current value of function            1  0.000000000000000E+000
+ Done.
+FUN3D 13.6-c04c9a5b80 Adjoint started 11/22/2021 at 10:52:24 with 1 processes
+Contents of ../Flow//fun3d.nml file below------------------------
+&project
+  project_rootname = 'coarse2'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of ../Flow//fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file ../Flow/moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ Code_id=           2
+ Preparing to read binary AFLR3 grid: ../Flow/coarse2.lb8.ugrid
+ error opening ../Flow/coarse2.lb8.ugrid
+ Preparing to read binary AFLR3 grid: ../Flow/coarse2.b8.ugrid
+ 
+  nnodes              4033
+  ntface,nqface       680 1120
+  ntet,npyr,nprz,nhex 1565 0 5992 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.12508910E-03,  0.55095755E-02,  143.499543155
+cell statistics:  prz,  0.74318621E-07,  0.18263243E-02,   94.999998401
+cell statistics:  all,  0.74318621E-07,  0.55095755E-02,  143.499543155
+
+     ... Constructing partition node sets for level-0...                  7557 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to coarse2.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    300.22    300.22
+  NOTE: kappa_umuscl set by grid: .50
+ loading design ...
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Using linear elasticity to reposition grid...
+ 
+ loading design ...
+ No active shape variables: exiting from reposition_grid...
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ Static aeroelastic adjoint mesh update
+ 
+ Begin Mesh Movement, Time Step 100   (Current Step 100)
+ Solving linear elasticity equations for mesh deformation
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Elasticity Convergence:
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ Static adjoint mesh updated moving_grid = .false. now
+ 
+ Reading ../Flow/coarse2.flow (version  12.20)
+ the restart files contains history iterations = 100
+ 
+       Lift -0.123833806829784E-04         Drag  0.620051960284735E-01
+ Iter            adjoint RMS  adjoint MAX   X location   Y location   Z location
+    1  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.00000000000000E+00
+Reduced yaw derivative         =    0.00000000000000E+00
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+    2  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.00000000000000E+00
+Reduced yaw derivative         =    0.00000000000000E+00
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+    3  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.00000000000000E+00
+Reduced yaw derivative         =    0.00000000000000E+00
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+    4  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+    5  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+    6  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+    7  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+    8  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+    9  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   10  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   11  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   12  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   13  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   14  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   15  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   16  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   17  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   18  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   19  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   20  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   21  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   22  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   23  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   24  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   25  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   26  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   27  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   28  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   29  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   30  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   31  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   32  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   33  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   34  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   35  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   36  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   37  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   38  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   39  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   40  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   41  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   42  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   43  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   44  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   45  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   46  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   47  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   48  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   49  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   50  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   51  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   52  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   53  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   54  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   55  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   56  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   57  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   58  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   59  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   60  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   61  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   62  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   63  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   64  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   65  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   66  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   67  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   68  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   69  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   70  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   71  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   72  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   73  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   74  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   75  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   76  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   77  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   78  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   79  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   80  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   81  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   82  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   83  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   84  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   85  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   86  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   87  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   88  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   89  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   90  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   91  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   92  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   93  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   94  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   95  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   96  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   97  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   98  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+   99  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+  100  0.000000000000000E+00  0.00000E+00  0.40000E+01 -0.41709E+00  0.10000E+01
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.00000000000000E+00
+Reduced yaw derivative         =    0.00000000000000E+00
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+ Done.
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 (1.2730348881285687+0j)
+Grad  ksfailure Var:  AOA   0.0
+Grad  ksfailure Var:  thickness   (5.236804913322235e-15+0j)
+Transfer scheme [0]: freeing MELD data...
