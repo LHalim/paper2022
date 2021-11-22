@@ -1,74 +1,70 @@
 &project
-    project_rootname = 'coarse2'
+  project_rootname = 'baseline'
 /
-
 &raw_grid
-    grid_format = 'aflr3'
-    data_format = 'stream'
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
 /
-
-&force_moment_integ_properties
-    area_reference = 1.0
-    x_moment_length = 1.0
-    y_moment_length = 1.0
-    x_moment_center = 0.0
-    y_moment_center = 0.0
-    z_moment_center = 0.0
-/
-
 &governing_equations
-    eqn_type = 'compressible'
-    viscous_terms = 'turbulent'
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
 /
-
 &reference_physical_properties
-    dim_input_type = 'nondimensional'
-    mach_number = 6.6
-    reynolds_number = 1300000
-    temperature = 300
-    temperature_units = 'Kelvin'
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
 /
-
 &inviscid_flux_method
-    flux_construction = 'roe'
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
 /
-
-&turbulent_diffusion_models
-    turbulence_model = 'sa'
-/
-
 &code_run_control
-    steps = 500
-    restart_read = 'off'
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
 /
-
 &nonlinear_solver_parameters
-    time_accuracy = 'steady'
-    time_step_nondim = 0.02
-    subiterations = 5
-    schedule_cfl(1:2) = 20.0, 20.0
-    schedule_cflturb(1:2) = 5.0, 5.0
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
 /
-
+&elasticity_gmres
+  tol = 1.e-14
+/
 &global
-!    boundary_animation_freq = 100
-    volume_animation_freq = 100
+  moving_grid = .true.
+  boundary_animation_freq = 10
+  volume_animation_freq = 10
 /
-
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&boundary_output_variables
+  number_of_boundaries = -1
+  boundary_list        = '1-6'
+  temperature          = .true.
+  mach                 = .true.
+/
 &massoud_output
   funtofem_include_skin_friction = .true.
 /
-
 &volume_output_variables
-    primitive_variables = .true.
-    vort_mag = .true.
-    mach = .true.
-    q_criterion = .true.
-/
-
-&boundary_output_variables
-!    number_of_boundaries = 1
-!    boundary_list = 2
-!    cp = .true.
+  export_to ='vtk'
+  x = .false.
+  y = .false.
+  z = .false.
+  temperature = .true.
+  mach = .true.
+  p = .true.
 /
 
