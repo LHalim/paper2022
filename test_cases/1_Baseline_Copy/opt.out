@@ -2865,3 +2865,869 @@ Reduced yaw derivative         =   -0.29519653908476E-07
  Current value of function            1  0.000000000000000E+000
 Reduced AOA derivative         =   -0.99801858372652E-10
 Reduced yaw derivative         =   -0.29517887012773E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.18147727E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.32974442E-14   relative_residual =  0.18170012E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   37  0.438128879796197E-10  0.51218E-09  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.10020083857245E-09
+Reduced yaw derivative         =   -0.29520977422657E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17964358E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.33520955E-14   relative_residual =  0.18659702E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   38  0.400083138236356E-10  0.47066E-09  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.10027533949002E-09
+Reduced yaw derivative         =   -0.29524326600632E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17159368E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.30080718E-14   relative_residual =  0.17530202E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   39  0.358636740005144E-10  0.41092E-09  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.10004737405980E-09
+Reduced yaw derivative         =   -0.29524349045283E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17021634E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27828991E-14   relative_residual =  0.16349189E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   40  0.322432410617943E-10  0.37613E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99715196185382E-10
+Reduced yaw derivative         =   -0.29520045145516E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17477277E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.28407479E-14   relative_residual =  0.16253950E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   41  0.294940528051074E-10  0.35328E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99493900964047E-10
+Reduced yaw derivative         =   -0.29512872977657E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17582652E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.28474948E-14   relative_residual =  0.16194911E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   42  0.274220984528795E-10  0.33497E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99484670096469E-10
+Reduced yaw derivative         =   -0.29505567675464E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17310779E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27617902E-14   relative_residual =  0.15954165E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   43  0.257515009067147E-10  0.31737E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99643511697175E-10
+Reduced yaw derivative         =   -0.29500664187032E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17173310E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27646071E-14   relative_residual =  0.16098278E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   44  0.242653571797202E-10  0.29815E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99841716144984E-10
+Reduced yaw derivative         =   -0.29499313804348E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17182126E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.28764936E-14   relative_residual =  0.16741197E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   45  0.227071661180291E-10  0.27726E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99959719182050E-10
+Reduced yaw derivative         =   -0.29500868437177E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17074807E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.28547946E-14   relative_residual =  0.16719337E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   46  0.209084724806472E-10  0.25630E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99952847251877E-10
+Reduced yaw derivative         =   -0.29503410059451E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16928780E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27586909E-14   relative_residual =  0.16295863E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   47  0.189937044480107E-10  0.23721E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99858699545461E-10
+Reduced yaw derivative         =   -0.29504888470150E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16947618E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27068620E-14   relative_residual =  0.15971932E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   48  0.172808613892429E-10  0.22102E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99755950377236E-10
+Reduced yaw derivative         =   -0.29504178957360E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17060796E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26930481E-14   relative_residual =  0.15785008E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   49  0.159487644347311E-10  0.20745E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99709652982750E-10
+Reduced yaw derivative         =   -0.29501491259805E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17095017E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26751867E-14   relative_residual =  0.15648927E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   50  0.149045614797151E-10  0.19525E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99737655893360E-10
+Reduced yaw derivative         =   -0.29498023436236E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17051532E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26940820E-14   relative_residual =  0.15799648E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   51  0.139790263867728E-10  0.18301E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99812160562561E-10
+Reduced yaw derivative         =   -0.29495183183745E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17015048E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27200198E-14   relative_residual =  0.15985966E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   52  0.130866556892758E-10  0.16995E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99886551992593E-10
+Reduced yaw derivative         =   -0.29493849402221E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16991446E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27514248E-14   relative_residual =  0.16193000E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   53  0.121842007917755E-10  0.15609E-09  0.51167E+00 -0.90256E+00  0.27408E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99925682898603E-10
+Reduced yaw derivative         =   -0.29494025904420E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16956322E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27201774E-14   relative_residual =  0.16042261E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   54  0.112322053437450E-10  0.14528E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99921791655762E-10
+Reduced yaw derivative         =   -0.29494984806473E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16934573E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.27019032E-14   relative_residual =  0.15954953E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   55  0.102541320546287E-10  0.13921E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99891259316463E-10
+Reduced yaw derivative         =   -0.29495748470520E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16951453E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26895446E-14   relative_residual =  0.15866159E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   56  0.935118515539355E-11  0.13360E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99859277521145E-10
+Reduced yaw derivative         =   -0.29495617990799E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16982029E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26817340E-14   relative_residual =  0.15791600E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   57  0.860176990918236E-11  0.12805E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99843995180744E-10
+Reduced yaw derivative         =   -0.29494475263283E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16992927E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26796007E-14   relative_residual =  0.15768918E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   58  0.798269645058705E-11  0.12219E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99848721854414E-10
+Reduced yaw derivative         =   -0.29492741158522E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16984774E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26859598E-14   relative_residual =  0.15813927E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   59  0.742414891568256E-11  0.11586E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99864133105765E-10
+Reduced yaw derivative         =   -0.29491067888794E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16972910E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26968955E-14   relative_residual =  0.15889412E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   60  0.689272409224723E-11  0.10916E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99876634826213E-10
+Reduced yaw derivative         =   -0.29489968023189E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16961908E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26999757E-14   relative_residual =  0.15917877E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   61  0.638675983289899E-11  0.10241E-09  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99876841534612E-10
+Reduced yaw derivative         =   -0.29489579920304E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16952585E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26866854E-14   relative_residual =  0.15848234E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   62  0.589909058375196E-11  0.95936E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99863671833030E-10
+Reduced yaw derivative         =   -0.29489664029217E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16950525E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26829313E-14   relative_residual =  0.15828013E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   63  0.542661464681231E-11  0.89968E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99843046226441E-10
+Reduced yaw derivative         =   -0.29489790712644E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16957264E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26794115E-14   relative_residual =  0.15800966E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   64  0.499272977409463E-11  0.84543E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99823245191951E-10
+Reduced yaw derivative         =   -0.29489590952677E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16965638E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26765506E-14   relative_residual =  0.15776304E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   65  0.462500300949546E-11  0.79543E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99810165598712E-10
+Reduced yaw derivative         =   -0.29488932416440E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16968901E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26757820E-14   relative_residual =  0.15768741E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   66  0.431897141315111E-11  0.74791E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99804926797921E-10
+Reduced yaw derivative         =   -0.29487944857910E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16967170E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26773139E-14   relative_residual =  0.15779378E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   67  0.404713243967945E-11  0.70157E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99804471994826E-10
+Reduced yaw derivative         =   -0.29486908123678E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16963628E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26786671E-14   relative_residual =  0.15790650E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   68  0.379285010756436E-11  0.65624E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99804154081697E-10
+Reduced yaw derivative         =   -0.29486083572488E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16960242E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26762133E-14   relative_residual =  0.15779334E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   69  0.355540812609094E-11  0.61274E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99800544668942E-10
+Reduced yaw derivative         =   -0.29485584650970E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16958228E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26727186E-14   relative_residual =  0.15760600E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   70  0.333325571794230E-11  0.57234E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99792990124317E-10
+Reduced yaw derivative         =   -0.29485345729078E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16958599E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26708748E-14   relative_residual =  0.15749383E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   71  0.312239316249822E-11  0.53595E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99783384034733E-10
+Reduced yaw derivative         =   -0.29485187706269E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16960883E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26692832E-14   relative_residual =  0.15737879E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   72  0.292697966356615E-11  0.50366E-10  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99774637940370E-10
+Reduced yaw derivative         =   -0.29484929710156E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16963193E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26678902E-14   relative_residual =  0.15727524E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   73  0.275610110571442E-11  0.49681E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99768904680072E-10
+Reduced yaw derivative         =   -0.29484481662011E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16964164E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26671501E-14   relative_residual =  0.15722260E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   74  0.261023360855463E-11  0.49290E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99766537785467E-10
+Reduced yaw derivative         =   -0.29483873848452E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16963907E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26668621E-14   relative_residual =  0.15720801E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   75  0.248062212926012E-11  0.48880E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99766205157577E-10
+Reduced yaw derivative         =   -0.29483219608866E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16963216E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26661585E-14   relative_residual =  0.15717294E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   76  0.236063161688145E-11  0.48453E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99765890454520E-10
+Reduced yaw derivative         =   -0.29482642135966E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16962723E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26648030E-14   relative_residual =  0.15709760E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   77  0.224956479392127E-11  0.48016E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99764087995987E-10
+Reduced yaw derivative         =   -0.29482209273395E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16962777E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26635028E-14   relative_residual =  0.15702044E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   78  0.214702130631613E-11  0.47572E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99760510669413E-10
+Reduced yaw derivative         =   -0.29481908334081E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16963444E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26625043E-14   relative_residual =  0.15695541E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   79  0.205098722095455E-11  0.47123E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99756008319579E-10
+Reduced yaw derivative         =   -0.29481666753737E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16964430E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26615786E-14   relative_residual =  0.15689172E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   80  0.196161141790222E-11  0.46672E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99751875921028E-10
+Reduced yaw derivative         =   -0.29481399808735E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16965294E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26606889E-14   relative_residual =  0.15683129E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   81  0.188154789889367E-11  0.46221E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99749037630346E-10
+Reduced yaw derivative         =   -0.29481056037266E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16965828E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26598946E-14   relative_residual =  0.15677954E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   82  0.181173329138449E-11  0.45771E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99747581907835E-10
+Reduced yaw derivative         =   -0.29480637403635E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16966150E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26591154E-14   relative_residual =  0.15673063E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   83  0.175001971960124E-11  0.45326E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99746848556356E-10
+Reduced yaw derivative         =   -0.29480188340183E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16966486E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26582365E-14   relative_residual =  0.15667572E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   84  0.169412449482388E-11  0.44887E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99745925038259E-10
+Reduced yaw derivative         =   -0.29479764884144E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16966979E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26573142E-14   relative_residual =  0.15661682E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   85  0.164326758733205E-11  0.44459E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99744201741959E-10
+Reduced yaw derivative         =   -0.29479403390292E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16967641E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26564596E-14   relative_residual =  0.15656034E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   86  0.159684476544377E-11  0.44041E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99741660847866E-10
+Reduced yaw derivative         =   -0.29479105044147E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16968393E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26556493E-14   relative_residual =  0.15650565E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   87  0.155378737373398E-11  0.43637E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99738779849399E-10
+Reduced yaw derivative         =   -0.29478841345794E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16969120E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26548032E-14   relative_residual =  0.15644908E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   88  0.151372034787048E-11  0.43246E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99736171039098E-10
+Reduced yaw derivative         =   -0.29478573972601E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16969753E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26539013E-14   relative_residual =  0.15639010E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   89  0.147731583600766E-11  0.42869E-10  0.72658E-01  0.46181E-02  0.25484E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99734208735954E-10
+Reduced yaw derivative         =   -0.29478276167525E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16970318E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26529657E-14   relative_residual =  0.15632976E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   90  0.144507787941118E-11  0.42680E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99732859752339E-10
+Reduced yaw derivative         =   -0.29477944305185E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16970901E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26520186E-14   relative_residual =  0.15626858E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   91  0.141661083103176E-11  0.42518E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99731778465497E-10
+Reduced yaw derivative         =   -0.29477595404342E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16971570E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26510873E-14   relative_residual =  0.15620755E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   92  0.139119927834992E-11  0.42360E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99730564914220E-10
+Reduced yaw derivative         =   -0.29477254397839E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16972326E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26502001E-14   relative_residual =  0.15614831E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   93  0.136834962758364E-11  0.42207E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99729008342879E-10
+Reduced yaw derivative         =   -0.29476939602505E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16973117E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26493488E-14   relative_residual =  0.15609088E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   94  0.134761106351134E-11  0.42060E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99727178495209E-10
+Reduced yaw derivative         =   -0.29476654254161E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16973875E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26484863E-14   relative_residual =  0.15603310E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   95  0.132846592854197E-11  0.41919E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99725339334924E-10
+Reduced yaw derivative         =   -0.29476387413328E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16974563E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26475716E-14   relative_residual =  0.15597289E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   96  0.131064776938555E-11  0.41784E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99723766812231E-10
+Reduced yaw derivative         =   -0.29476122084431E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16975194E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26466006E-14   relative_residual =  0.15590989E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   97  0.129426671295542E-11  0.41654E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99722592807062E-10
+Reduced yaw derivative         =   -0.29475845026916E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16975818E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26455998E-14   relative_residual =  0.15584521E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   98  0.127948222351268E-11  0.41530E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99721759971783E-10
+Reduced yaw derivative         =   -0.29475552847407E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16976487E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26446060E-14   relative_residual =  0.15578052E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+   99  0.126622658465358E-11  0.41410E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99721092704378E-10
+Reduced yaw derivative         =   -0.29475251870264E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16977219E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26436467E-14   relative_residual =  0.15571730E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+  100  0.125427702508706E-11  0.41296E-10  0.79109E-01  0.47532E-02  0.91556E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99720421645955E-10
+Reduced yaw derivative         =   -0.29474952975276E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16977991E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26427256E-14   relative_residual =  0.15565596E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =   -0.99720421645955E-10
+Reduced yaw derivative         =   -0.29474952975276E-07
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16977991E-06   relative_residual =  0.10000000E+01
+     Search direction    12  residual =  0.26427256E-14   relative_residual =  0.15565596E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000002E-13
+ Done.
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 (1.2730349876655533+0j)
+Grad  ksfailure Var:  AOA   -9.972042164595493e-11
+Grad  ksfailure Var:  thickness   (-6.639284511149952e-06+0j)
+Transfer scheme [0]: freeing MELD data...
+Transfer scheme [1]: freeing MELD data...
