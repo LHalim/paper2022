@@ -23,7 +23,7 @@ class wedgeTACS(TacsSteadyInterface):
             }
 
             bdfFile = os.path.join(os.path.dirname(__file__), 'nastran_CAPS3_coarse_thermal.dat')
-            FEASolver = pyTACS(bdfFile, options=structOptions, comm=comm)
+            FEASolver = pyTACS(bdfFile, options=structOptions, comm=tacs_comm)
 
             # Material properties
             rho = 2780.0        # density kg/m^3
