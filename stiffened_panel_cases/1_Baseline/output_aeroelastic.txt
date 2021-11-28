@@ -1,0 +1,4707 @@
+FUN3D 13.6-c04c9a5b80 Flow started 11/27/2021 at 21:19:56 with 96 processes
+Contents of fun3d.nml file below------------------------
+&project
+  project_rootname = 'baseline'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ loading design ...
+ Preparing to read binary AFLR3 grid: baseline.lb8.ugrid
+ error opening baseline.lb8.ugrid
+ Preparing to read binary AFLR3 grid: baseline.b8.ugrid
+ 
+  nnodes              22982
+  ntface,nqface       4716 2756
+  ntet,npyr,nprz,nhex 21761 0 33592 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.13717282E-04,  0.55984674E-03,  148.755731243
+cell statistics:  prz,  0.11040477E-07,  0.14998125E-03,  100.076464230
+cell statistics:  all,  0.11040477E-07,  0.55984674E-03,  148.755731243
+
+     ... PM (64,skip_do_min) :  F T
+     ... Use subset of cores to call ParMETIS            4
+     ... Calling ParMETIS (ParMETIS_V3_PartKway) .... F T
+     ... Temporary memory usage                 409084  Bytes
+     ... edgeCut        25661
+     ... Constructing partition node sets for level-0...                 55353 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to baseline.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    218.36    218.36
+ Grid Motion Type 
+   deform
+ 
+  NOTE: kappa_umuscl set by grid: .50
+ 
+ Grid read complete
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+  
+  Use of a smooth (differentiable) flux limiter detected
+  Examining the grid to compute the reference length....
+  The grid based limiter reference length is   3.346019862021463E-002
+  
+ 
+ Computing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ Done.
+[0] Creating TACSAssembler with numOwnedNodes = 4165 numElements = 4032
+[0] BCSRMat: ILU(1000000) Input fill ratio 10.00, actual fill ratio: 4.79, nnz(ILU) = 175887
+Transfer scheme [0]: Creating scheme of type MELD...
+FUN3D 13.6-c04c9a5b80 Flow started 11/27/2021 at 21:20:00 with 96 processes
+Contents of fun3d.nml file below------------------------
+&project
+  project_rootname = 'baseline'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ loading design ...
+ Preparing to read binary AFLR3 grid: baseline.lb8.ugrid
+ error opening baseline.lb8.ugrid
+ Preparing to read binary AFLR3 grid: baseline.b8.ugrid
+ 
+  nnodes              22982
+  ntface,nqface       4716 2756
+  ntet,npyr,nprz,nhex 21761 0 33592 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.13717282E-04,  0.55984674E-03,  148.755731243
+cell statistics:  prz,  0.11040477E-07,  0.14998125E-03,  100.076464230
+cell statistics:  all,  0.11040477E-07,  0.55984674E-03,  148.755731243
+
+     ... PM (64,skip_do_min) :  F T
+     ... Use subset of cores to call ParMETIS            4
+     ... Calling ParMETIS (ParMETIS_V3_PartKway) .... F T
+     ... Temporary memory usage                 409084  Bytes
+     ... edgeCut        25661
+     ... Constructing partition node sets for level-0...                 55353 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to baseline.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    410.42    410.42
+  NOTE: kappa_umuscl set by grid: .50
+ 
+ Grid read complete
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+  
+  Use of a smooth (differentiable) flux limiter detected
+  Examining the grid to compute the reference length....
+  The grid based limiter reference length is   3.346019862021463E-002
+  
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ 
+ Begin Mesh Movement, Time Step 1   (Current Step 1)
+ Solving linear elasticity equations for mesh deformation
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Elasticity Convergence:
+     Search direction     1  residual =  0.21781121E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.89233947E-14   relative_residual =  0.40968483E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ Iter            density_RMS  density_MAX   X-location   Y-location   Z-location
+    1  0.390934281430219E-04  0.42846E-03  0.16879E+01 -0.60187E-01  0.37093E+00
+       Lift  0.155584879074813E-02         Drag  0.151816396464399E+00
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 1
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 2   (Current Step 2)
+ Solving linear elasticity equations for mesh deformation
+   Info: restarting elasticity solver
+     Initial values for solution taken as final values from previous step
+   Elasticity Convergence:
+     Search direction     1  residual =  0.27257841E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.54783652E-14   relative_residual =  0.20098310E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    2  0.115441679251591E-04  0.58985E-04  0.29125E+01 -0.18200E+00  0.65895E+00
+       Lift  0.541685530440519E-02         Drag  0.134370198973900E+00
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 2
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 3   (Current Step 3)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.12914895E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.58184545E-14   relative_residual =  0.45052278E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    3  0.765650375021284E-05  0.59803E-04  0.29782E+01 -0.70170E+00  0.35631E+00
+       Lift -0.157609253995539E-03         Drag  0.877765300023361E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 3
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 4   (Current Step 4)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.19341329E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.86742274E-14   relative_residual =  0.44848145E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    4  0.406150143825611E-05  0.31252E-04  0.27688E+01 -0.44267E+00  0.14696E+00
+       Lift  0.844981201796429E-03         Drag  0.729829178024573E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 4
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 5   (Current Step 5)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.62059249E-10   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.55609875E-14   relative_residual =  0.89607715E-04
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    5  0.369378824697386E-05  0.28495E-04  0.37984E+01 -0.62661E+00  0.33970E+00
+       Lift -0.415415360431913E-03         Drag  0.625770681034214E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 5
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 6   (Current Step 6)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.69885430E-10   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.33383163E-14   relative_residual =  0.47768417E-04
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    6  0.232170970245956E-05  0.18394E-04  0.35605E+01 -0.83409E+00  0.62059E+00
+       Lift -0.100223000985838E-02         Drag  0.594998500774622E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 6
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 7   (Current Step 7)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.49300134E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.81327247E-14   relative_residual =  0.16496354E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    7  0.162834682699387E-05  0.13494E-04  0.10627E+01 -0.11825E+00  0.25392E+00
+       Lift -0.525954566854431E-03         Drag  0.605638977255059E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 7
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 8   (Current Step 8)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.40992428E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.90013239E-14   relative_residual =  0.21958504E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    8  0.117858692236000E-05  0.14942E-04  0.91926E+00 -0.11255E+00  0.44325E+00
+       Lift  0.587622953818806E-03         Drag  0.633452991488453E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 8
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 9   (Current Step 9)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.18945747E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.89135348E-14   relative_residual =  0.47047681E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+    9  0.949541407883063E-06  0.10924E-04  0.91926E+00 -0.11255E+00  0.44325E+00
+       Lift  0.105547551640724E-02         Drag  0.653903079283058E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 9
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 10   (Current Step 10)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.31758899E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.98791554E-14   relative_residual =  0.31106731E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   10  0.899597497597276E-06  0.91332E-05  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift  0.450811305897709E-03         Drag  0.656495149753636E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 10
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 11   (Current Step 11)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.54366199E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.95727223E-14   relative_residual =  0.17607857E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   11  0.730733078088057E-06  0.80870E-05  0.10627E+01 -0.11825E+00  0.25392E+00
+       Lift -0.391970973094158E-03         Drag  0.643408393048037E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 11
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 12   (Current Step 12)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.52929583E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.66209435E-14   relative_residual =  0.12508966E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   12  0.619300593139557E-06  0.58411E-05  0.91926E+00 -0.11255E+00  0.44325E+00
+       Lift -0.658842349201477E-03         Drag  0.626592035115592E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 12
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 13   (Current Step 13)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.35670926E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.40273422E-14   relative_residual =  0.11290265E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   13  0.590949691640451E-06  0.59688E-05  0.82263E+00 -0.19971E+00  0.36503E+00
+       Lift -0.235999255597982E-03         Drag  0.615974169716963E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 13
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 14   (Current Step 14)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.13679549E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.30431123E-14   relative_residual =  0.22245706E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   14  0.494353385105810E-06  0.57615E-05  0.82263E+00 -0.19971E+00  0.36503E+00
+       Lift  0.274803202002761E-03         Drag  0.613874128313595E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 14
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 15   (Current Step 15)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.65935022E-11   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.21822363E-14   relative_residual =  0.33096771E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   15  0.432215812179624E-06  0.47445E-05  0.10627E+01 -0.11825E+00  0.25392E+00
+       Lift  0.324413596760038E-03         Drag  0.617437882249697E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 15
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 16   (Current Step 16)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14352484E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.29282469E-14   relative_residual =  0.20402371E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   16  0.407649800728170E-06  0.45514E-05  0.91926E+00 -0.11255E+00  0.44325E+00
+       Lift -0.259396826464603E-04         Drag  0.623542626827947E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 16
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 17   (Current Step 17)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.11083517E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.34442702E-14   relative_residual =  0.31075608E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   17  0.339261798895664E-06  0.36922E-05  0.82263E+00 -0.19971E+00  0.36503E+00
+       Lift -0.329758979585554E-03         Drag  0.630127149379173E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 17
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 18   (Current Step 18)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.46158344E-11   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.30517225E-14   relative_residual =  0.66114212E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   18  0.296375540447015E-06  0.36311E-05  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.291466191675283E-03         Drag  0.634660742392127E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 18
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 19   (Current Step 19)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.13258621E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.28747211E-14   relative_residual =  0.21681902E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   19  0.289153687372124E-06  0.27540E-05  0.10627E+01 -0.11825E+00  0.25392E+00
+       Lift -0.138711442074237E-04         Drag  0.634404263611418E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 19
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 20   (Current Step 20)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.17876461E-10   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.23611242E-14   relative_residual =  0.13208007E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   20  0.251443813484916E-06  0.29512E-05  0.83792E+00 -0.11077E+00  0.78984E+00
+       Lift  0.191156420759689E-03         Drag  0.629315253312981E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 20
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 21   (Current Step 21)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14720220E-10   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.92975429E-14   relative_residual =  0.63161711E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   21  0.212265835005695E-06  0.24382E-05  0.82263E+00 -0.19971E+00  0.36503E+00
+       Lift  0.148580263022645E-03         Drag  0.623072527326336E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 21
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 22   (Current Step 22)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.68103311E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.55664933E-14   relative_residual =  0.81736016E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   22  0.199576602601782E-06  0.26374E-05  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.414991670616288E-04         Drag  0.620018889353954E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 22
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 23   (Current Step 23)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.23408426E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.44928838E-14   relative_residual =  0.19193447E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   23  0.182918460470767E-06  0.18155E-05  0.75346E+00 -0.24095E+00  0.93280E+00
+       Lift -0.165043593994501E-03         Drag  0.621494161556325E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 23
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 24   (Current Step 24)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.58935224E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.62872347E-14   relative_residual =  0.10668043E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   24  0.161300319988626E-06  0.17107E-05  0.91926E+00 -0.11255E+00  0.44325E+00
+       Lift -0.120373558353954E-03         Drag  0.625151864415779E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 24
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 25   (Current Step 25)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.50595514E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.59042757E-14   relative_residual =  0.11669564E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   25  0.147394392759603E-06  0.17806E-05  0.82263E+00 -0.19971E+00  0.36503E+00
+       Lift  0.185170848276151E-04         Drag  0.627650672885904E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 25
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 26   (Current Step 26)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16602376E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.43420622E-14   relative_residual =  0.26153258E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   26  0.134287824156850E-06  0.18046E-05  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift  0.110490746109919E-03         Drag  0.627419892875871E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 26
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 27   (Current Step 27)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.44400462E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.48160938E-14   relative_residual =  0.10846945E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   27  0.121011076295765E-06  0.12434E-05  0.75346E+00 -0.24095E+00  0.93280E+00
+       Lift  0.876028321753499E-04         Drag  0.625190193647841E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 27
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 28   (Current Step 28)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.66697634E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.47526820E-14   relative_residual =  0.71257130E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   28  0.109978227714191E-06  0.11577E-05  0.83792E+00 -0.11077E+00  0.78984E+00
+       Lift -0.547015056801802E-05         Drag  0.622575422528575E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 28
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 29   (Current Step 29)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.57560248E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.37407864E-14   relative_residual =  0.64989060E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   29  0.981874861273799E-07  0.10416E-05  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.789651800818216E-04         Drag  0.620749131777488E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 29
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 30   (Current Step 30)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.27059605E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.23532391E-14   relative_residual =  0.86965019E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   30  0.881211638781504E-07  0.10942E-05  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.829610206683583E-04         Drag  0.620111247630227E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 30
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 31   (Current Step 31)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.10782031E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.96880438E-14   relative_residual =  0.89853604E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   31  0.812862984299513E-07  0.80978E-06  0.75346E+00 -0.24095E+00  0.93280E+00
+       Lift -0.354944891603059E-04         Drag  0.620543589990259E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 31
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 32   (Current Step 32)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.25674634E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.26460111E-14   relative_residual =  0.10305935E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   32  0.730750282944924E-07  0.83459E-06  0.83792E+00 -0.11077E+00  0.78984E+00
+       Lift  0.114925740559232E-04         Drag  0.621578463017408E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 32
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 33   (Current Step 33)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.21907759E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.24054150E-14   relative_residual =  0.10979740E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   33  0.640717741009255E-07  0.76768E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift  0.216467499441795E-04         Drag  0.622532233196230E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 33
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 34   (Current Step 34)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.68367900E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.76934726E-14   relative_residual =  0.11253048E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   34  0.576902071647870E-07  0.82622E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.317474439090096E-05         Drag  0.622814786994222E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 34
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 35   (Current Step 35)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.17950963E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.89009556E-14   relative_residual =  0.49584835E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   35  0.522531404337455E-07  0.56054E-06  0.75346E+00 -0.24095E+00  0.93280E+00
+       Lift -0.360911547513246E-04         Drag  0.622313416358705E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 35
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 36   (Current Step 36)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.27076512E-11   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.19209862E-14   relative_residual =  0.70946591E-03
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   36  0.464625431778294E-07  0.43255E-06  0.28801E+01 -0.62976E+00  0.91399E+00
+       Lift -0.520579807276863E-04         Drag  0.621441813295221E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 36
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 37   (Current Step 37)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.22934544E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.81755235E-14   relative_residual =  0.35647202E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   37  0.421289985916355E-07  0.49671E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.448660691510381E-04         Drag  0.620790338730101E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 37
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 38   (Current Step 38)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.10015718E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.44552511E-14   relative_residual =  0.44482595E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   38  0.391638950608971E-07  0.52714E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.258715538880547E-04         Drag  0.620690778081727E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 38
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 39   (Current Step 39)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.55564375E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.42890251E-14   relative_residual =  0.77190199E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   39  0.359643090538777E-07  0.37991E-06  0.83792E+00 -0.11077E+00  0.78984E+00
+       Lift -0.112389188400289E-04         Drag  0.621069521551307E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 39
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 40   (Current Step 40)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.11832212E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.62464088E-14   relative_residual =  0.52791556E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   40  0.322987918642535E-07  0.38652E-06  0.83792E+00 -0.11077E+00  0.78984E+00
+       Lift -0.979135154864199E-05         Drag  0.621606711573289E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 40
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 41   (Current Step 41)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.97886608E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.53466999E-14   relative_residual =  0.54621362E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   41  0.288759316406822E-07  0.31604E-06  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.189824080160666E-04         Drag  0.621993048228163E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 41
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 42   (Current Step 42)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.28994702E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.30389480E-14   relative_residual =  0.10481046E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   42  0.262830857402041E-07  0.30564E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.294878827463945E-04         Drag  0.622083314514633E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 42
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 43   (Current Step 43)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.74125310E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.36323940E-14   relative_residual =  0.49003424E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   43  0.243892354024096E-07  0.26913E-06  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.331784114547186E-04         Drag  0.621911792128427E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 43
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 44   (Current Step 44)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.11184771E-11   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.42579411E-14   relative_residual =  0.38069096E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   44  0.227002010726725E-07  0.24356E-06  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.285003704932518E-04         Drag  0.621623154817951E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 44
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 45   (Current Step 45)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.92735748E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.32692463E-14   relative_residual =  0.35253356E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   45  0.211710152404951E-07  0.26151E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.200206598961284E-04         Drag  0.621386510263327E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 45
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 46   (Current Step 46)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.37384354E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.82246173E-14   relative_residual =  0.22000159E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   46  0.198224089641574E-07  0.24535E-06  0.64034E+00 -0.11014E+00  0.87188E+00
+       Lift -0.138815347199337E-04         Drag  0.621310268242805E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 46
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 47   (Current Step 47)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.27189738E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.88855725E-14   relative_residual =  0.32679875E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   47  0.183501106436193E-07  0.21289E-06  0.26409E+01 -0.44022E+00  0.57628E+00
+       Lift -0.131241992612048E-04         Drag  0.621395839674450E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 47
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 48   (Current Step 48)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.53000928E-12   relative_residual =  0.10000000E+01
+     Search direction     8  residual =  0.25593782E-14   relative_residual =  0.48289309E-02
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   48  0.167739879750098E-07  0.20282E-06  0.26409E+01 -0.44022E+00  0.57628E+00
+       Lift -0.162701683077904E-04         Drag  0.621553815510368E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 48
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 49   (Current Step 49)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.42567411E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.95414639E-14   relative_residual =  0.22414950E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   49  0.154933659308889E-07  0.18833E-06  0.26409E+01 -0.44022E+00  0.57628E+00
+       Lift -0.194399917266206E-04         Drag  0.621671802868972E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 49
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 50   (Current Step 50)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.12266575E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.52193691E-14   relative_residual =  0.42549522E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   50  0.145998868472112E-07  0.17686E-06  0.31695E+01 -0.49689E+00  0.80650E+00
+       Lift -0.196495023089860E-04         Drag  0.621682210886541E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 50
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 51   (Current Step 51)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.31157984E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.75689010E-14   relative_residual =  0.24292012E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   51  0.138511413932457E-07  0.17837E-06  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.167065286952881E-04         Drag  0.621591201742844E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 51
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 52   (Current Step 52)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.46674284E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.87449662E-14   relative_residual =  0.18736155E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   52  0.131264508708274E-07  0.18301E-06  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.127034336147229E-04         Drag  0.621456075123369E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 52
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 53   (Current Step 53)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.38175478E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.63401605E-14   relative_residual =  0.16607940E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   53  0.124462125629895E-07  0.18069E-06  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.100322818458754E-04         Drag  0.621341225239622E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 53
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 54   (Current Step 54)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14843427E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.33065905E-14   relative_residual =  0.22276463E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   54  0.118000045529937E-07  0.17678E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.967131685572117E-05         Drag  0.621283597382201E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 54
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 55   (Current Step 55)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.11828279E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.36409819E-14   relative_residual =  0.30782008E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   55  0.111613823284534E-07  0.17304E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.108727941674332E-04         Drag  0.621282509612665E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 55
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 56   (Current Step 56)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.22311933E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.48345927E-14   relative_residual =  0.21668193E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   56  0.105676444100414E-07  0.16536E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.120675538590478E-04         Drag  0.621309328293485E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 56
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 57   (Current Step 57)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.17698376E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.36840868E-14   relative_residual =  0.20815959E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   57  0.100802781245944E-07  0.15612E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.121308394664582E-04         Drag  0.621328993050626E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 57
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 58   (Current Step 58)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.48835468E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.75431578E-14   relative_residual =  0.15446065E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   58  0.967940006496247E-08  0.14766E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.110397096676925E-04         Drag  0.621318556579212E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 58
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 59   (Current Step 59)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.12752179E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.30995531E-14   relative_residual =  0.24306067E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   59  0.929386963890026E-08  0.14108E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.962357790831149E-05         Drag  0.621276146227833E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 59
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 60   (Current Step 60)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.19037804E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.34340564E-14   relative_residual =  0.18038092E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   60  0.890078790576537E-08  0.13609E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.879809330348128E-05         Drag  0.621217313740054E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 60
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 61   (Current Step 61)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.15477678E-12   relative_residual =  0.10000000E+01
+     Search direction     7  residual =  0.25176752E-14   relative_residual =  0.16266492E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   61  0.852158740505264E-08  0.13157E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.892652756099646E-05         Drag  0.621163095359178E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 61
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 62   (Current Step 62)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.59373407E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.53104599E-14   relative_residual =  0.89441724E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   62  0.816270301301422E-08  0.12627E-06  0.29665E+01 -0.40565E+00  0.18985E+00
+       Lift -0.969160892236832E-05         Drag  0.621127445173075E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 62
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 63   (Current Step 63)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.48651416E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.56538588E-14   relative_residual =  0.11621160E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   63  0.782238856826548E-08  0.12390E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.104544082654565E-04         Drag  0.621112298846734E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 63
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 64   (Current Step 64)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.93575157E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.85661524E-14   relative_residual =  0.91543019E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   64  0.750730468887423E-08  0.12486E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.107567393331005E-04         Drag  0.621109531601547E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 64
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 65   (Current Step 65)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.73028378E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.63706759E-14   relative_residual =  0.87235621E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   65  0.721912966543316E-08  0.12463E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.105769726725086E-04         Drag  0.621107697643421E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 65
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 66   (Current Step 66)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.20858113E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.84919398E-14   relative_residual =  0.40712886E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   66  0.694425059941744E-08  0.12281E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.102377796321205E-04         Drag  0.621098535390198E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 66
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 67   (Current Step 67)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.48365214E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.55931814E-14   relative_residual =  0.11564472E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   67  0.667025185706438E-08  0.11972E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.101080964871989E-04         Drag  0.621080081501211E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 67
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 68   (Current Step 68)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.76761905E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.65000852E-14   relative_residual =  0.84678529E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   68  0.639757565542282E-08  0.11592E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.103481559016305E-04         Drag  0.621055739225255E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 68
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 69   (Current Step 69)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.59785544E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.48552434E-14   relative_residual =  0.81210993E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   69  0.613487079078048E-08  0.11201E-06  0.37075E+01 -0.34746E+00  0.14662E+00
+       Lift -0.108408370666260E-04         Drag  0.621031594299978E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 69
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 70   (Current Step 70)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.23563115E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.93973245E-14   relative_residual =  0.39881504E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   70  0.588639391986544E-08  0.10919E-06  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.113377027637968E-04         Drag  0.621012630243214E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 70
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 71   (Current Step 71)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.23121690E-13   relative_residual =  0.10000000E+01
+     Search direction     4  residual =  0.76007291E-14   relative_residual =  0.32872723E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   71  0.565225296694283E-08  0.10689E-06  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.116480907553394E-04         Drag  0.621000601191100E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 71
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 72   (Current Step 72)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.44273089E-13   relative_residual =  0.10000000E+01
+     Search direction     6  residual =  0.37409010E-14   relative_residual =  0.84496046E-01
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   72  0.543193736020796E-08  0.10404E-06  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.117475274502798E-04         Drag  0.620994014129873E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 72
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 73   (Current Step 73)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.31877661E-13   relative_residual =  0.10000000E+01
+     Search direction     5  residual =  0.80309602E-14   relative_residual =  0.25193066E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   73  0.522284789393013E-08  0.10048E-06  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.117513763349401E-04         Drag  0.620989570352430E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 73
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 74   (Current Step 74)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.19826700E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.88712824E-14   relative_residual =  0.44744120E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   74  0.502019864008737E-08  0.96322E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.118103424028719E-04         Drag  0.620984025582377E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 74
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 75   (Current Step 75)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.23918647E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.91416401E-14   relative_residual =  0.38219720E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   75  0.482167801006676E-08  0.91923E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.119932861552641E-04         Drag  0.620975900884021E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 75
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 76   (Current Step 76)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.38230227E-13   relative_residual =  0.10000000E+01
+     Search direction     5  residual =  0.99424280E-14   relative_residual =  0.26006720E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   76  0.462925457032430E-08  0.87631E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.122662167219156E-04         Drag  0.620965532935090E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 76
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 77   (Current Step 77)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.32517372E-13   relative_residual =  0.10000000E+01
+     Search direction     4  residual =  0.95603975E-14   relative_residual =  0.29400893E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   77  0.444643280885776E-08  0.83613E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.125366038132646E-04         Drag  0.620954462316355E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 77
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 78   (Current Step 78)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.18328788E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.93912581E-14   relative_residual =  0.51237747E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   78  0.427568763519126E-08  0.79829E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.127260030782765E-04         Drag  0.620944491221180E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 78
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 79   (Current Step 79)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16229921E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.91130176E-14   relative_residual =  0.56149487E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   79  0.411751650406976E-08  0.76130E-07  0.39139E+01 -0.36542E+00  0.75327E+00
+       Lift -0.128155945801283E-04         Drag  0.620936707552242E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 79
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 80   (Current Step 80)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.24687085E-13   relative_residual =  0.10000000E+01
+     Search direction     5  residual =  0.62867185E-14   relative_residual =  0.25465616E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   80  0.397141671212030E-08  0.73395E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.128498114298538E-04         Drag  0.620931086218820E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 80
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 81   (Current Step 81)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.20371854E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.86093995E-14   relative_residual =  0.42261246E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   81  0.383426948610398E-08  0.70545E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.128835764813457E-04         Drag  0.620926898014586E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 81
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 82   (Current Step 82)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16973258E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.82555927E-14   relative_residual =  0.48638822E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   82  0.370302825836664E-08  0.67548E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.129489429422170E-04         Drag  0.620923017650059E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 82
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 83   (Current Step 83)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.15889112E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.59997663E-14   relative_residual =  0.37760237E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   83  0.357625106300288E-08  0.64452E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.130394788738453E-04         Drag  0.620918503272273E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 83
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 84   (Current Step 84)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16865116E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.93525574E-14   relative_residual =  0.55455044E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   84  0.345466873282718E-08  0.61299E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.131237485926753E-04         Drag  0.620912988373526E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 84
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 85   (Current Step 85)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.22046618E-13   relative_residual =  0.10000000E+01
+     Search direction     5  residual =  0.46822643E-14   relative_residual =  0.21238016E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   85  0.334026748671870E-08  0.58119E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.131726488400363E-04         Drag  0.620906723090959E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 85
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 86   (Current Step 86)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.13930069E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.64290336E-14   relative_residual =  0.46152203E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   86  0.323485251082310E-08  0.54917E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.131781342432473E-04         Drag  0.620900335777191E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 86
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 87   (Current Step 87)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14899558E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.82367525E-14   relative_residual =  0.55281859E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   87  0.313892144390083E-08  0.51692E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.131536083759134E-04         Drag  0.620894467421954E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 87
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 88   (Current Step 88)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16583607E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.93340732E-14   relative_residual =  0.56284941E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   88  0.305122965818759E-08  0.48441E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.131204030266148E-04         Drag  0.620889455493828E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 88
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 89   (Current Step 89)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16571925E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.91327607E-14   relative_residual =  0.55109836E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   89  0.296937609417535E-08  0.45173E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.130924951776778E-04         Drag  0.620885208285543E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 89
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 90   (Current Step 90)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16964735E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.75740896E-14   relative_residual =  0.44646082E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   90  0.289110656239043E-08  0.41903E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.130696499801430E-04         Drag  0.620881412110124E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 90
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 91   (Current Step 91)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14131677E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.87459978E-14   relative_residual =  0.61889312E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   91  0.281424739501895E-08  0.38669E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.130380554378214E-04         Drag  0.620877453345954E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 91
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 92   (Current Step 92)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.16662870E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.87495217E-14   relative_residual =  0.52509091E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   92  0.274228306415523E-08  0.35472E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.129959170398897E-04         Drag  0.620872853392186E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 92
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 93   (Current Step 93)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.17688355E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.81677427E-14   relative_residual =  0.46175820E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   93  0.267462925756193E-08  0.32347E-07  0.35972E+01 -0.45055E+00  0.16164E+00
+       Lift -0.129373383227576E-04         Drag  0.620867674949692E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 93
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 94   (Current Step 94)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.18309141E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.97097697E-14   relative_residual =  0.53032361E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   94  0.261232158557469E-08  0.32057E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.128658217028907E-04         Drag  0.620862199559506E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 94
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 95   (Current Step 95)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.18910168E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.84060380E-14   relative_residual =  0.44452478E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   95  0.255564557219553E-08  0.31994E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.127894069452006E-04         Drag  0.620856780796236E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 95
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 96   (Current Step 96)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.17551546E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.90155166E-14   relative_residual =  0.51365941E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   96  0.250363178469145E-08  0.31785E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.127136169752619E-04         Drag  0.620851681644040E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 96
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 97   (Current Step 97)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.19002200E-13   relative_residual =  0.10000000E+01
+     Search direction     3  residual =  0.65161651E-14   relative_residual =  0.34291635E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   97  0.245467991291934E-08  0.31383E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.126393563166819E-04         Drag  0.620846937404163E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 97
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 98   (Current Step 98)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14433840E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.80775070E-14   relative_residual =  0.55962289E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   98  0.240739850312372E-08  0.30781E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.125638052215485E-04         Drag  0.620842370796465E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 98
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 99   (Current Step 99)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.14604963E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.71586680E-14   relative_residual =  0.49015312E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+   99  0.236126917088487E-08  0.30011E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.124835014164560E-04         Drag  0.620837720122008E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 99
+ Time for write: .0 s
+ 
+ 
+ Begin Mesh Movement, Time Step 100   (Current Step 100)
+ Solving linear elasticity equations for mesh deformation
+   Elasticity Convergence:
+     Search direction     1  residual =  0.15091815E-13   relative_residual =  0.10000000E+01
+     Search direction     2  residual =  0.79624351E-14   relative_residual =  0.52759957E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+   limiter frozen
+  100  0.231666922411534E-08  0.29131E-07  0.29904E+01 -0.28478E+00  0.30000E+00
+       Lift -0.123971651609020E-04         Drag  0.620832879966787E-01
+ 
+ Writing baseline.flow (version 12.2)
+  inserting current history iterations 100
+ Time for write: .0 s
+ 
+ Current value of function            1  0.000000000000000E+000
+ Done.
+FUN3D 13.6-c04c9a5b80 Adjoint started 11/27/2021 at 21:20:27 with 96 processes
+Contents of ../Flow//fun3d.nml file below------------------------
+&project
+  project_rootname = 'baseline'
+/
+&raw_grid
+  grid_format = 'aflr3'
+  data_format = 'default'
+  swap_yz_axes = .true.
+/
+&governing_equations
+  eqn_type      = 'compressible'
+  viscous_terms = 'laminar'
+/
+&reference_physical_properties
+  mach_number     = 0.5
+  angle_of_attack = 0.0
+  reynolds_number = 1.357e4
+  temperature     = 300.0
+  temperature_units = 'Kelvin'
+/
+&inviscid_flux_method
+flux_construction       = 'roe'
+flux_limiter            = 'hvenkat'
+smooth_limiter_coeff    = 1.0
+freeze_limiter_iteration = 1
+/
+&code_run_control
+  restart_write_freq = 1
+  restart_read       = 'off'
+  steps              =  100
+/
+&nonlinear_solver_parameters
+  time_accuracy = "steady"
+  time_step_nondim =   0.1
+  subiterations =          0
+  schedule_iteration(1:2) = 1,10
+  schedule_cfl(1:2) = 200.0,200.0
+  schedule_cflturb(1:2) = 50.0,50.0
+/
+&elasticity_gmres
+  tol = 1.e-14
+/
+&global
+  moving_grid = .true.
+/
+&slice_data
+  nslices       = 1
+  slice_z(:)    = .true.
+  slice_location(:) = 2.5
+/
+&massoud_output
+  funtofem_include_skin_friction = .true.
+/
+Contents of ../Flow//fun3d.nml file above------------------------
+ The default "stream" data format is being used for the grid format "aflr3".
+ Namelist data file ../Flow/moving_body.input successfully opened
+   Namelist forced_motion not read
+   Namelist observer_motion not read
+   Namelist surface_motion_from_file not read
+   Namelist motion_from_file not read
+   Namelist composite_overset_mesh not read
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+ Setting flow solver convergence tolerance to  0.1E-29
+ (to prevent unintended kickout from coupling process)
+ 
+ Code_id=           2
+ Preparing to read binary AFLR3 grid: ../Flow/baseline.lb8.ugrid
+ error opening ../Flow/baseline.lb8.ugrid
+ Preparing to read binary AFLR3 grid: ../Flow/baseline.b8.ugrid
+ 
+  nnodes              22982
+  ntface,nqface       4716 2756
+  ntet,npyr,nprz,nhex 21761 0 33592 0
+ 
+ Swapping y- and z-points and preserving right-handedness.
+ ...y(new) = -z(input)
+ ...z(new) = +y(input)
+cell statistics: type,      min volume,      max volume, max face angle
+cell statistics:  tet,  0.13717282E-04,  0.55984674E-03,  148.755731243
+cell statistics:  prz,  0.11040477E-07,  0.14998125E-03,  100.076464230
+cell statistics:  all,  0.11040477E-07,  0.55984674E-03,  148.755731243
+
+     ... PM (64,skip_do_min) :  F T
+     ... Use subset of cores to call ParMETIS            4
+     ... Calling ParMETIS (ParMETIS_V3_PartKway) .... F T
+     ... Temporary memory usage                 409084  Bytes
+     ... edgeCut        25661
+     ... Constructing partition node sets for level-0...                 55353 T
+     ... Edge Partitioning ....
+     ... Boundary partitioning....
+     ... Reordering for cache efficiency....
+     ... Write global grid information to baseline.grid_info
+     ... Time after preprocess TIME/Mem(MB):  ********    420.12    420.12
+  NOTE: kappa_umuscl set by grid: .50
+ loading design ...
+  ... Use the reference Mach number for the freestream:  T
+ Setting Sutherland constant =   198.60 rather than default value of  198.60
+  Running an aeroelastic case with itime = 0
+  -->Setting ignore_grid_velocity to true
+  -->Setting need_grid_velocity to false
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ 
+ Using linear elasticity to reposition grid...
+ 
+ loading design ...
+ No active shape variables: exiting from reposition_grid...
+ 
+ Number of Moving Bodies:
+  1
+ 
+ Motion Data for Body    1
+   Body Name:   bc-6
+   Parent Name: 
+  Number of Boundaries Defining Body:
+    1
+  List of Boundaries Defining Body:
+    6
+  Mesh Movement For Body Motion
+   deform
+  Component Mesh ID:
+    0
+  Rotational Motion:
+   rotate
+    0
+   no forced rotation specified
+  Translational Motion
+   translate
+    0
+   no forced translation specified
+  List of Boundaries Used For Force/Moment Integration:
+    6
+  Moment Center:
+   xmc         ymc         zmc  
+   0.00000E+00 0.00000E+00 0.00000E+00
+   move_mc
+    1
+  Surface Files
+   No surface files specified
+ 
+ Moving Body Family Trees:
+ 
+   number after each component name is the generation;
+   generation 0 motion is relative to inertial frame
+   generation 1 motion is relative to generation 0
+   generation 2 motion is relative to generation 1, etc
+ 
+   Body Name: bc-6 (0)
+    Ancestors:
+      none
+    Descendants:
+      none
+ 
+ Body 1 initial moment center:   0.0000000E+00  0.0000000E+00  0.0000000E+00
+ Static aeroelastic adjoint mesh update
+ 
+ Begin Mesh Movement, Time Step 100   (Current Step 100)
+ Solving linear elasticity equations for mesh deformation
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Elasticity Convergence:
+     Search direction     1  residual =  0.18308997E-08   relative_residual =  0.10000000E+01
+     Search direction    13  residual =  0.34547393E-14   relative_residual =  0.18869080E-05
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ 
+ Recomputing distance function:
+   Wall spacing: 0.180+309 min, 0.000E+00 max, 0.000E+00 avg
+ 
+ Static adjoint mesh updated moving_grid = .false. now
+ 
+ Reading ../Flow/baseline.flow (version  12.20)
+ the restart files contains history iterations = 100
+ 
+       Lift -0.123971651609011E-04         Drag  0.620832879966795E-01
+ Iter            adjoint RMS  adjoint MAX   X location   Y location   Z location
+    1  0.000000000000000E+00  0.00000E+00  0.30000E+01 -0.17503E+00  0.60000E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.00000000000000E+00
+Reduced yaw derivative         =    0.00000000000000E+00
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Info: initial call to elasticity solver
+     Elasticity model: (1/distance)**1.0
+     Linear solver: gmres
+     Left preconditioner: point-multicolor  Preconditioner iterations: 5
+     Initial values for solution taken as zero
+     Convergence tolerances: tol_rel = 0.10000000E-13 tol_abs = 0.10000000E-13
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.00000000E+00   relative_residual =  0.00000000E+00
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.20000000E-13
+    2  0.317942275452624E-11  0.19862E-09  0.79721E-01  0.18231E-09  0.91554E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.18547274120675E-11
+Reduced yaw derivative         =   -0.47789160017628E-10
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.11006707E-06   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.94591306E-14   relative_residual =  0.85939694E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000001E-13
+    3  0.403783213619596E-11  0.87478E-10  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10234042676040E-09
+Reduced yaw derivative         =   -0.59567945925629E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.80888702E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.86962886E-14   relative_residual =  0.10750931E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000001E-13
+    4  0.177355483009079E-10  0.40905E-09  0.91691E-01 -0.10000E+01  0.90461E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.14419484079243E-09
+Reduced yaw derivative         =   -0.84266944154120E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.45022220E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.45342306E-14   relative_residual =  0.10071095E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+    5  0.250878597167108E-10  0.49646E-09  0.91691E-01 -0.10000E+01  0.90461E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.13585932060666E-09
+Reduced yaw derivative         =   -0.85859634693597E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.47900165E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.36678805E-14   relative_residual =  0.76573441E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+    6  0.253602820293756E-10  0.40575E-09  0.91691E-01 -0.10000E+01  0.90461E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.11365342357852E-09
+Reduced yaw derivative         =   -0.88455388818196E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.34506250E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.34149054E-14   relative_residual =  0.98964837E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+    7  0.268713766627803E-10  0.41531E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10107351851636E-09
+Reduced yaw derivative         =   -0.95589258801585E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.18383546E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.24869812E-14   relative_residual =  0.13528300E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+    8  0.285717150389451E-10  0.44932E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.99311948940456E-10
+Reduced yaw derivative         =   -0.98786849170973E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.19546776E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.31855506E-14   relative_residual =  0.16297064E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+    9  0.266117214170204E-10  0.41912E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10177824644933E-09
+Reduced yaw derivative         =   -0.97628665677104E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.20489081E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.24218238E-14   relative_residual =  0.11820070E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   10  0.223368126651258E-10  0.34942E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10521560007537E-09
+Reduced yaw derivative         =   -0.96236785615460E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.23154961E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.83247663E-14   relative_residual =  0.35952409E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   11  0.182449606122581E-10  0.27832E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10838932061832E-09
+Reduced yaw derivative         =   -0.96045110734374E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.23946044E-07   relative_residual =  0.10000000E+01
+     Search direction    11  residual =  0.22759459E-14   relative_residual =  0.95044756E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   12  0.149977322320398E-10  0.22125E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.11011788986227E-09
+Reduced yaw derivative         =   -0.95956476083750E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.21066148E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.92605403E-14   relative_residual =  0.43959343E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   13  0.124575507620098E-10  0.17909E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10977657421469E-09
+Reduced yaw derivative         =   -0.95346731984770E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17640097E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.90963525E-14   relative_residual =  0.51566342E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   14  0.105383374269368E-10  0.15110E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10813911203979E-09
+Reduced yaw derivative         =   -0.94637592383893E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16529385E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.49702638E-14   relative_residual =  0.30069261E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   15  0.914118964644937E-11  0.13530E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10664208484918E-09
+Reduced yaw derivative         =   -0.94235058061634E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16869701E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.59247247E-14   relative_residual =  0.35120507E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   16  0.812334435902371E-11  0.12585E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10612722881952E-09
+Reduced yaw derivative         =   -0.94066302991038E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17297232E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.61095869E-14   relative_residual =  0.35321183E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   17  0.732193771457251E-11  0.11583E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10649250435518E-09
+Reduced yaw derivative         =   -0.93931912672194E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17704606E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.68315918E-14   relative_residual =  0.38586521E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   18  0.661643566828972E-11  0.10181E-09  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10718570227193E-09
+Reduced yaw derivative         =   -0.93798678568136E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.18203751E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.41518404E-14   relative_residual =  0.22807609E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   19  0.599443291777853E-11  0.84828E-10  0.43046E+00 -0.10000E+01  0.90743E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10773659202306E-09
+Reduced yaw derivative         =   -0.93718919033795E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.18344399E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.49051118E-14   relative_residual =  0.26739016E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   20  0.546594352657898E-11  0.71511E-10  0.98911E+00 -0.94695E+00  0.32445E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10793958191179E-09
+Reduced yaw derivative         =   -0.93686568328529E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17768541E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.46108502E-14   relative_residual =  0.25949514E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   21  0.498719583199647E-11  0.63873E-10  0.98911E+00 -0.94695E+00  0.32445E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10781624741424E-09
+Reduced yaw derivative         =   -0.93650983414639E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16895629E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.45454164E-14   relative_residual =  0.26902913E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   22  0.450670201583902E-11  0.54430E-10  0.98911E+00 -0.94695E+00  0.32445E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10752913214719E-09
+Reduced yaw derivative         =   -0.93592690445180E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16436350E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.39455354E-14   relative_residual =  0.24004937E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   23  0.401804061371581E-11  0.46064E-10  0.24314E+01 -0.90474E+00  0.31651E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10727710153174E-09
+Reduced yaw derivative         =   -0.93531015385006E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16519214E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.22845761E-14   relative_residual =  0.13829811E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   24  0.354778832864907E-11  0.40792E-10  0.24314E+01 -0.90474E+00  0.31651E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10718625420163E-09
+Reduced yaw derivative         =   -0.93483041938756E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16764697E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.29793842E-14   relative_residual =  0.17771774E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   25  0.311896454529642E-11  0.37912E-10  0.55534E+00 -0.10000E+01  0.63675E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10725724941666E-09
+Reduced yaw derivative         =   -0.93446212630203E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16941192E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.35839852E-14   relative_residual =  0.21155449E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   26  0.274526098482416E-11  0.34338E-10  0.55534E+00 -0.10000E+01  0.63675E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10740071531988E-09
+Reduced yaw derivative         =   -0.93413181451049E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17056511E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.25620477E-14   relative_residual =  0.15020937E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   27  0.244942559741706E-11  0.32165E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10751708274795E-09
+Reduced yaw derivative         =   -0.93383969904501E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.17072650E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.25006015E-14   relative_residual =  0.14646827E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   28  0.224915660709169E-11  0.30129E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10755453843225E-09
+Reduced yaw derivative         =   -0.93361686950636E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16915076E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.30614432E-14   relative_residual =  0.18098903E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   29  0.211640074391529E-11  0.27352E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10751889534272E-09
+Reduced yaw derivative         =   -0.93345679929724E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16673176E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.28451520E-14   relative_residual =  0.17064248E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   30  0.198769940960571E-11  0.24097E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745103787526E-09
+Reduced yaw derivative         =   -0.93332184394508E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16537078E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.23567998E-14   relative_residual =  0.14251610E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   31  0.182114413184783E-11  0.22923E-10  0.24314E+01 -0.90474E+00  0.31651E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10739641793246E-09
+Reduced yaw derivative         =   -0.93317868751267E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16560303E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.13888546E-14   relative_residual =  0.83866501E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   32  0.162295601167774E-11  0.20719E-10  0.24314E+01 -0.90474E+00  0.31651E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10738154527805E-09
+Reduced yaw derivative         =   -0.93300535614167E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16642901E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.18429370E-14   relative_residual =  0.11073412E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   33  0.142716122170258E-11  0.17555E-10  0.24314E+01 -0.90474E+00  0.31651E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10740479539008E-09
+Reduced yaw derivative         =   -0.93278471098695E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16702857E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.21163656E-14   relative_residual =  0.12670680E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   34  0.126297550147222E-11  0.15663E-10  0.47429E+00 -0.69876E+00  0.84360E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744354614922E-09
+Reduced yaw derivative         =   -0.93251468361234E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16731065E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.16353447E-14   relative_residual =  0.97743011E-07
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   35  0.114149033406965E-11  0.14241E-10  0.47429E+00 -0.69876E+00  0.84360E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747172504297E-09
+Reduced yaw derivative         =   -0.93222400552235E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16723590E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.96407527E-14   relative_residual =  0.57647626E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   36  0.106126666269730E-11  0.13034E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747573510372E-09
+Reduced yaw derivative         =   -0.93196547666968E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16669663E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.19548459E-14   relative_residual =  0.11726967E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   37  0.101039480991195E-11  0.12056E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745925258862E-09
+Reduced yaw derivative         =   -0.93178633261005E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16596152E-07   relative_residual =  0.10000000E+01
+     Search direction    10  residual =  0.19788351E-14   relative_residual =  0.11923457E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   38  0.965812749713754E-12  0.10917E-10  0.55578E+00 -0.84436E+00  0.85344E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743658674038E-09
+Reduced yaw derivative         =   -0.93170070872077E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16553421E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.78662176E-14   relative_residual =  0.47520193E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   39  0.905697075699962E-12  0.10434E-10  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10742170696912E-09
+Reduced yaw derivative         =   -0.93168372312391E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16556416E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71591473E-14   relative_residual =  0.43240924E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   40  0.825214637559703E-12  0.95935E-11  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10742058276316E-09
+Reduced yaw derivative         =   -0.93168666932436E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16578908E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.89945398E-14   relative_residual =  0.54252907E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   41  0.737599645623257E-12  0.84238E-11  0.23020E+01 -0.88611E+00  0.28881E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743009820577E-09
+Reduced yaw derivative         =   -0.93166150979949E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16596243E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.91705791E-14   relative_residual =  0.55256957E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   42  0.660581647278835E-12  0.75079E-11  0.47429E+00 -0.69876E+00  0.84360E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744216249700E-09
+Reduced yaw derivative         =   -0.93158263168295E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16602310E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.83663139E-14   relative_residual =  0.50392469E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   43  0.602298376932781E-12  0.69718E-11  0.72865E+00 -0.68230E+00  0.39483E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744939728220E-09
+Reduced yaw derivative         =   -0.93145687156762E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16595339E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.80145263E-14   relative_residual =  0.48293839E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   44  0.560066851957489E-12  0.64460E-11  0.72865E+00 -0.68230E+00  0.39483E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744900738280E-09
+Reduced yaw derivative         =   -0.93131731043298E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16574741E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.79399675E-14   relative_residual =  0.47904020E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   45  0.527884432936269E-12  0.60469E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744319546699E-09
+Reduced yaw derivative         =   -0.93120397196032E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16549711E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.74315334E-14   relative_residual =  0.44904310E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   46  0.499665750541773E-12  0.58014E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743668025672E-09
+Reduced yaw derivative         =   -0.93114215159498E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16533892E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67466951E-14   relative_residual =  0.40805245E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   47  0.469072497332680E-12  0.54590E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743338577574E-09
+Reduced yaw derivative         =   -0.93113044401478E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16531228E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71535788E-14   relative_residual =  0.43273123E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   48  0.432593493574356E-12  0.50536E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743441095040E-09
+Reduced yaw derivative         =   -0.93114410083720E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16535085E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.79387370E-14   relative_residual =  0.48011469E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   49  0.392923362099994E-12  0.46517E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743814717452E-09
+Reduced yaw derivative         =   -0.93115011906216E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16538366E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.81351067E-14   relative_residual =  0.49189302E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   50  0.356751826218961E-12  0.43085E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744191624748E-09
+Reduced yaw derivative         =   -0.93112466225261E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16538068E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.78923563E-14   relative_residual =  0.47722359E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   51  0.328412518022451E-12  0.40405E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744376760028E-09
+Reduced yaw derivative         =   -0.93106362188031E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16533114E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.76105189E-14   relative_residual =  0.46031974E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   52  0.306800663464655E-12  0.38245E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744336302453E-09
+Reduced yaw derivative         =   -0.93098192140549E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16524006E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73683251E-14   relative_residual =  0.44591638E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   53  0.288457999020982E-12  0.36185E-11  0.51167E+00 -0.90258E+00  0.27407E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744171275497E-09
+Reduced yaw derivative         =   -0.93090337139762E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16513989E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.72669454E-14   relative_residual =  0.44004785E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   54  0.270959839692658E-12  0.34260E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744024396021E-09
+Reduced yaw derivative         =   -0.93084739623868E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16506907E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.72654281E-14   relative_residual =  0.44014472E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   55  0.252912935991641E-12  0.32697E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10743990997961E-09
+Reduced yaw derivative         =   -0.93081978674271E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16503818E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.75131704E-14   relative_residual =  0.45523831E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   56  0.233467288935614E-12  0.31233E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744081647958E-09
+Reduced yaw derivative         =   -0.93081169065982E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16502988E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.76057346E-14   relative_residual =  0.46087015E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   57  0.213191510159991E-12  0.29889E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744241738971E-09
+Reduced yaw derivative         =   -0.93080623331021E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16502289E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.77612208E-14   relative_residual =  0.47031177E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   58  0.194245910386501E-12  0.28622E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744400491237E-09
+Reduced yaw derivative         =   -0.93078826780758E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16500464E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.76750119E-14   relative_residual =  0.46513915E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   59  0.178518898739414E-12  0.27360E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744513693547E-09
+Reduced yaw derivative         =   -0.93075177721187E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16497032E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.75075644E-14   relative_residual =  0.45508576E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   60  0.165886957244897E-12  0.26037E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744578725003E-09
+Reduced yaw derivative         =   -0.93070148978287E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16492324E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.72989808E-14   relative_residual =  0.44256836E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   61  0.154922014892456E-12  0.24630E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744622449789E-09
+Reduced yaw derivative         =   -0.93064877579256E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16487455E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73240886E-14   relative_residual =  0.44422191E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   62  0.144609376764891E-12  0.23168E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744677419431E-09
+Reduced yaw derivative         =   -0.93060481326903E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16483532E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73693962E-14   relative_residual =  0.44707627E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   63  0.134671256254156E-12  0.21710E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744763080709E-09
+Reduced yaw derivative         =   -0.93057493916928E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16480832E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73401122E-14   relative_residual =  0.44537266E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   64  0.124975474533808E-12  0.20321E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10744880138639E-09
+Reduced yaw derivative         =   -0.93055688298932E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16478857E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73367275E-14   relative_residual =  0.44522066E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   65  0.115522657210518E-12  0.19040E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745016233917E-09
+Reduced yaw derivative         =   -0.93054316746918E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16476931E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.74333432E-14   relative_residual =  0.45113639E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   66  0.106775837176944E-12  0.17873E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745155883649E-09
+Reduced yaw derivative         =   -0.93052577692777E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16474594E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.73972095E-14   relative_residual =  0.44900708E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   67  0.993301596004705E-13  0.16797E-11  0.83211E-01 -0.63760E+00 -0.83105E-11
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745288254151E-09
+Reduced yaw derivative         =   -0.93050033120357E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16471691E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.72817780E-14   relative_residual =  0.44207836E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   68  0.932203963077134E-13  0.16125E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745410044687E-09
+Reduced yaw derivative         =   -0.93046770466942E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16468389E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71358882E-14   relative_residual =  0.43330822E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   69  0.879343457105906E-13  0.16097E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745524213824E-09
+Reduced yaw derivative         =   -0.93043268297369E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16465073E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.70943168E-14   relative_residual =  0.43087064E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   70  0.830357203586278E-13  0.16063E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745636760340E-09
+Reduced yaw derivative         =   -0.93040084230041E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16462075E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.70865406E-14   relative_residual =  0.43047676E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   71  0.784196688746619E-13  0.16025E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745753490845E-09
+Reduced yaw derivative         =   -0.93037555200998E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16459462E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.70654465E-14   relative_residual =  0.42926352E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   72  0.740713048370070E-13  0.15987E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10745877786729E-09
+Reduced yaw derivative         =   -0.93035661786963E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16457074E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71149948E-14   relative_residual =  0.43233655E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   73  0.699462707308174E-13  0.15947E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746009695468E-09
+Reduced yaw derivative         =   -0.93034098290739E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16454692E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71539366E-14   relative_residual =  0.43476576E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   74  0.661087889324315E-13  0.15905E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746146360001E-09
+Reduced yaw derivative         =   -0.93032477430199E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16452160E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.71281840E-14   relative_residual =  0.43326737E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   75  0.627249271364651E-13  0.15859E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746283559200E-09
+Reduced yaw derivative         =   -0.93030541405466E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16449442E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.70541298E-14   relative_residual =  0.42883702E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   76  0.598430252974076E-13  0.15809E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746417762830E-09
+Reduced yaw derivative         =   -0.93028269820297E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16446619E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69725762E-14   relative_residual =  0.42395196E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   77  0.573239664561573E-13  0.15754E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746547783874E-09
+Reduced yaw derivative         =   -0.93025846884887E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16443822E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69267690E-14   relative_residual =  0.42123839E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   78  0.550166273027222E-13  0.15696E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746675193866E-09
+Reduced yaw derivative         =   -0.93023529287609E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16441149E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69124418E-14   relative_residual =  0.42043544E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   79  0.528771987016631E-13  0.15635E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746803275199E-09
+Reduced yaw derivative         =   -0.93021500093703E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16438611E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69227650E-14   relative_residual =  0.42112835E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   80  0.509028757430796E-13  0.15573E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10746935111299E-09
+Reduced yaw derivative         =   -0.93019786326812E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16436146E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69481041E-14   relative_residual =  0.42273316E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   81  0.490669850654749E-13  0.15509E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747071922636E-09
+Reduced yaw derivative         =   -0.93018271463976E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16433679E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69577781E-14   relative_residual =  0.42338529E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   82  0.473590992222156E-13  0.15443E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747212586220E-09
+Reduced yaw derivative         =   -0.93016779663160E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16431161E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.69373905E-14   relative_residual =  0.42220938E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   83  0.458123094607263E-13  0.15376E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747354530302E-09
+Reduced yaw derivative         =   -0.93015175646057E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16428591E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68959054E-14   relative_residual =  0.41975027E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   84  0.444498447869619E-13  0.15306E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747495364917E-09
+Reduced yaw derivative         =   -0.93013425990376E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16426002E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68539863E-14   relative_residual =  0.41726442E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   85  0.432453407268432E-13  0.15234E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747634222768E-09
+Reduced yaw derivative         =   -0.93011597091210E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16423442E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68278104E-14   relative_residual =  0.41573566E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   86  0.421565847107129E-13  0.15161E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747772055586E-09
+Reduced yaw derivative         =   -0.93009802112836E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16420937E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68200660E-14   relative_residual =  0.41532745E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   87  0.411634321322149E-13  0.15086E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10747910834591E-09
+Reduced yaw derivative         =   -0.93008133387503E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16418484E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68255841E-14   relative_residual =  0.41572561E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   88  0.402562542637029E-13  0.15012E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748052263115E-09
+Reduced yaw derivative         =   -0.93006617739296E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16416056E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68335042E-14   relative_residual =  0.41626955E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   89  0.394168616035823E-13  0.14936E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748196824127E-09
+Reduced yaw derivative         =   -0.93005213687626E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16413628E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68321860E-14   relative_residual =  0.41625082E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   90  0.386301616580429E-13  0.14861E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748343677025E-09
+Reduced yaw derivative         =   -0.93003844465724E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16411185E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.68177482E-14   relative_residual =  0.41543301E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   91  0.378983999711803E-13  0.14785E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748491341352E-09
+Reduced yaw derivative         =   -0.93002443369724E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16408733E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67953560E-14   relative_residual =  0.41413045E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   92  0.372301437049704E-13  0.14708E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748638646717E-09
+Reduced yaw derivative         =   -0.93000985789061E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16406287E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67740581E-14   relative_residual =  0.41289403E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   93  0.366242748533084E-13  0.14631E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748785348817E-09
+Reduced yaw derivative         =   -0.92999493755543E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16403864E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67603267E-14   relative_residual =  0.41211794E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   94  0.360720668396332E-13  0.14553E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10748932102883E-09
+Reduced yaw derivative         =   -0.92998015602864E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16401470E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67552323E-14   relative_residual =  0.41186748E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   95  0.355659740267744E-13  0.14476E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749079915640E-09
+Reduced yaw derivative         =   -0.92996595737268E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16399101E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67553994E-14   relative_residual =  0.41193719E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   96  0.350989668221888E-13  0.14399E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749229485241E-09
+Reduced yaw derivative         =   -0.92995251938626E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16396744E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67553142E-14   relative_residual =  0.41199120E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   97  0.346611244077441E-13  0.14321E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749380836006E-09
+Reduced yaw derivative         =   -0.92993970577887E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16394391E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67505879E-14   relative_residual =  0.41176205E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   98  0.342436598975529E-13  0.14243E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749533411377E-09
+Reduced yaw derivative         =   -0.92992718989858E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16392038E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67404588E-14   relative_residual =  0.41120321E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+   99  0.338443429873559E-13  0.14166E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749686490373E-09
+Reduced yaw derivative         =   -0.92991465492533E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16389690E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67275964E-14   relative_residual =  0.41047733E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+  100  0.334656450367903E-13  0.14087E-11  0.61427E-01 -0.69998E-05  0.82532E+00
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749839626625E-09
+Reduced yaw derivative         =   -0.92990195297794E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16387354E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67157743E-14   relative_residual =  0.40981443E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ Current value of function            1  0.000000000000000E+000
+Reduced AOA derivative         =    0.10749839626625E-09
+Reduced yaw derivative         =   -0.92990195297794E-09
+ 
+ Performing linear elasticity adjoint...
+ 
+ loading design ...
+ Solving mesh adjoint equations
+   Mesh Adjoint Convergence, Cost Function : 1
+     Search direction     1  residual =  0.16387354E-07   relative_residual =  0.10000000E+01
+     Search direction     9  residual =  0.67157743E-14   relative_residual =  0.40981443E-06
+     Convergence achieved: residual <= tol_rel * initial_residual + tol_abs =  0.10000000E-13
+ Done.
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
++--------------------------------------------------+
+|
+| TACS Init Times:
+|
+| TACS Module Time              :      0.000 sec
+| TACS Meshload Time            :      0.211 sec
+| TACS DV Processing Time       :      0.000 sec
+| TACS Finalize Initialization Time:      0.000 sec
+|
+| TACS Total Initialization Time:      0.211 sec
++--------------------------------------------------+
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+NOT CMPLX_MODE
+start
+set comm
+comm misc
+built model
+ndvs:  2
+created object
+Function 0 0.010577904922096402
+Grad  ksfailure Var:  AOA   1.0749839626624753e-10
+Grad  ksfailure Var:  thickness   -1.89022171783501e-07
+Transfer scheme [0]: freeing MELD data...
