@@ -109,7 +109,7 @@ class wedge_adjoint(object):
         plate.add_variable('structural',Variable('thickness',value=thickness,lower = 0.01, upper = 0.1))
         model.add_body(plate)
 
-        steady = Scenario('steady', group=0, steps=100)
+        steady = Scenario('steady', group=0, steps=2)
         steady.set_variable('aerodynamic',name='AOA',value=0.0,lower=-15.0,upper=15.0)
         temp = Function('ksfailure',analysis_type='structural') #temperature
         steady.add_function(temp)
