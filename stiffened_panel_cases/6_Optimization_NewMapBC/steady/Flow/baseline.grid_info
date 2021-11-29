@@ -24,25 +24,25 @@ Global Grid Info
      number of nodes            : 390
  
    boundary info for boundary3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 183
  
    boundary info for boundary4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 183
  
    boundary info for boundary5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 326
      number of quad faces       : 0
      number of nodes            : 185
  
    boundary info for boundary6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 182
@@ -54,7 +54,7 @@ Global Grid Info
      number of nodes            : 683
  
    boundary info for boundary8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 1702
      number of quad faces       : 2236
      number of nodes            : 3241
@@ -86,25 +86,25 @@ Info for Grid Partition 1
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -116,7 +116,7 @@ Info for Grid Partition 1
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 57
      number of quad faces       : 48
      number of nodes            : 107
@@ -147,25 +147,25 @@ Info for Grid Partition 2
      number of nodes            : 52
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 79
      number of quad faces       : 0
      number of nodes            : 52
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -177,7 +177,7 @@ Info for Grid Partition 2
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 5
      number of quad faces       : 27
      number of nodes            : 48
@@ -208,25 +208,25 @@ Info for Grid Partition 3
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 10
      number of quad faces       : 0
      number of nodes            : 12
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 91
      number of quad faces       : 0
      number of nodes            : 60
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -238,7 +238,7 @@ Info for Grid Partition 3
      number of nodes            : 40
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 80
      number of quad faces       : 41
      number of nodes            : 114
@@ -269,25 +269,25 @@ Info for Grid Partition 4
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 20
      number of quad faces       : 0
      number of nodes            : 19
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 81
      number of quad faces       : 0
      number of nodes            : 54
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -299,7 +299,7 @@ Info for Grid Partition 4
      number of nodes            : 40
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 45
      number of quad faces       : 28
      number of nodes            : 75
@@ -330,25 +330,25 @@ Info for Grid Partition 5
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 125
      number of quad faces       : 0
      number of nodes            : 80
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -360,7 +360,7 @@ Info for Grid Partition 5
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 29
      number of nodes            : 43
@@ -391,25 +391,25 @@ Info for Grid Partition 6
      number of nodes            : 52
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 52
      number of quad faces       : 0
      number of nodes            : 38
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -421,7 +421,7 @@ Info for Grid Partition 6
      number of nodes            : 70
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 24
      number of nodes            : 35
@@ -452,25 +452,25 @@ Info for Grid Partition 7
      number of nodes            : 40
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -482,7 +482,7 @@ Info for Grid Partition 7
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 57
      number of quad faces       : 57
      number of nodes            : 116
@@ -513,25 +513,25 @@ Info for Grid Partition 8
      number of nodes            : 60
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -543,7 +543,7 @@ Info for Grid Partition 8
      number of nodes            : 21
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 3
      number of nodes            : 8
@@ -574,25 +574,25 @@ Info for Grid Partition 9
      number of nodes            : 25
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -604,7 +604,7 @@ Info for Grid Partition 9
      number of nodes            : 50
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 43
      number of quad faces       : 50
      number of nodes            : 97
@@ -635,25 +635,25 @@ Info for Grid Partition 10
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -665,7 +665,7 @@ Info for Grid Partition 10
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 31
      number of nodes            : 45
@@ -696,25 +696,25 @@ Info for Grid Partition 11
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -726,7 +726,7 @@ Info for Grid Partition 11
      number of nodes            : 37
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 69
      number of quad faces       : 40
      number of nodes            : 104
@@ -757,25 +757,25 @@ Info for Grid Partition 12
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -787,7 +787,7 @@ Info for Grid Partition 12
      number of nodes            : 24
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 1
      number of quad faces       : 39
      number of nodes            : 59
@@ -818,25 +818,25 @@ Info for Grid Partition 13
      number of nodes            : 42
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -848,7 +848,7 @@ Info for Grid Partition 13
      number of nodes            : 32
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 26
      number of quad faces       : 45
      number of nodes            : 84
@@ -879,25 +879,25 @@ Info for Grid Partition 14
      number of nodes            : 43
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -909,7 +909,7 @@ Info for Grid Partition 14
      number of nodes            : 34
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -940,25 +940,25 @@ Info for Grid Partition 15
      number of nodes            : 102
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -970,7 +970,7 @@ Info for Grid Partition 15
      number of nodes            : 46
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 27
      number of quad faces       : 30
      number of nodes            : 64
@@ -1001,25 +1001,25 @@ Info for Grid Partition 16
      number of nodes            : 28
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1031,7 +1031,7 @@ Info for Grid Partition 16
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 36
      number of quad faces       : 61
      number of nodes            : 110
@@ -1062,25 +1062,25 @@ Info for Grid Partition 17
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1092,7 +1092,7 @@ Info for Grid Partition 17
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 29
      number of nodes            : 41
@@ -1123,25 +1123,25 @@ Info for Grid Partition 18
      number of nodes            : 59
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1153,7 +1153,7 @@ Info for Grid Partition 18
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 33
      number of quad faces       : 58
      number of nodes            : 107
@@ -1184,25 +1184,25 @@ Info for Grid Partition 19
      number of nodes            : 96
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1214,7 +1214,7 @@ Info for Grid Partition 19
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 49
      number of quad faces       : 33
      number of nodes            : 87
@@ -1245,25 +1245,25 @@ Info for Grid Partition 20
      number of nodes            : 80
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1275,7 +1275,7 @@ Info for Grid Partition 20
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 9
      number of nodes            : 17
@@ -1306,25 +1306,25 @@ Info for Grid Partition 21
      number of nodes            : 34
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1336,7 +1336,7 @@ Info for Grid Partition 21
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 29
      number of quad faces       : 49
      number of nodes            : 84
@@ -1367,25 +1367,25 @@ Info for Grid Partition 22
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1397,7 +1397,7 @@ Info for Grid Partition 22
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 22
      number of quad faces       : 23
      number of nodes            : 48
@@ -1428,25 +1428,25 @@ Info for Grid Partition 23
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1458,7 +1458,7 @@ Info for Grid Partition 23
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 61
      number of quad faces       : 55
      number of nodes            : 108
@@ -1489,25 +1489,25 @@ Info for Grid Partition 24
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1519,7 +1519,7 @@ Info for Grid Partition 24
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 56
      number of nodes            : 76
@@ -1550,25 +1550,25 @@ Info for Grid Partition 25
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1580,7 +1580,7 @@ Info for Grid Partition 25
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 67
      number of quad faces       : 58
      number of nodes            : 124
@@ -1611,25 +1611,25 @@ Info for Grid Partition 26
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1641,7 +1641,7 @@ Info for Grid Partition 26
      number of nodes            : 34
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 35
      number of nodes            : 49
@@ -1672,25 +1672,25 @@ Info for Grid Partition 27
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1702,7 +1702,7 @@ Info for Grid Partition 27
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 12
      number of nodes            : 21
@@ -1733,25 +1733,25 @@ Info for Grid Partition 28
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 103
      number of quad faces       : 0
      number of nodes            : 69
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1763,7 +1763,7 @@ Info for Grid Partition 28
      number of nodes            : 36
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 55
      number of quad faces       : 51
      number of nodes            : 111
@@ -1794,25 +1794,25 @@ Info for Grid Partition 29
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 110
      number of quad faces       : 0
      number of nodes            : 70
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 10
      number of quad faces       : 0
      number of nodes            : 13
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1824,7 +1824,7 @@ Info for Grid Partition 29
      number of nodes            : 40
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 52
      number of quad faces       : 21
      number of nodes            : 71
@@ -1855,25 +1855,25 @@ Info for Grid Partition 30
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 140
      number of quad faces       : 0
      number of nodes            : 88
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1885,7 +1885,7 @@ Info for Grid Partition 30
      number of nodes            : 27
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 28
      number of nodes            : 41
@@ -1916,25 +1916,25 @@ Info for Grid Partition 31
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1946,7 +1946,7 @@ Info for Grid Partition 31
      number of nodes            : 45
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 24
      number of nodes            : 37
@@ -1977,25 +1977,25 @@ Info for Grid Partition 32
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2007,7 +2007,7 @@ Info for Grid Partition 32
      number of nodes            : 27
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 21
      number of quad faces       : 44
      number of nodes            : 78
@@ -2038,25 +2038,25 @@ Info for Grid Partition 33
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2068,7 +2068,7 @@ Info for Grid Partition 33
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 56
      number of quad faces       : 56
      number of nodes            : 115
@@ -2099,25 +2099,25 @@ Info for Grid Partition 34
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2129,7 +2129,7 @@ Info for Grid Partition 34
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 46
      number of quad faces       : 14
      number of nodes            : 58
@@ -2160,25 +2160,25 @@ Info for Grid Partition 35
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2190,7 +2190,7 @@ Info for Grid Partition 35
      number of nodes            : 41
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 21
      number of quad faces       : 36
      number of nodes            : 69
@@ -2221,25 +2221,25 @@ Info for Grid Partition 36
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2251,7 +2251,7 @@ Info for Grid Partition 36
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 56
      number of nodes            : 75
@@ -2282,25 +2282,25 @@ Info for Grid Partition 37
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2312,7 +2312,7 @@ Info for Grid Partition 37
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 28
      number of quad faces       : 41
      number of nodes            : 80
@@ -2343,25 +2343,25 @@ Info for Grid Partition 38
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2373,7 +2373,7 @@ Info for Grid Partition 38
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 28
      number of nodes            : 42
@@ -2404,25 +2404,25 @@ Info for Grid Partition 39
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2434,7 +2434,7 @@ Info for Grid Partition 39
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 45
      number of quad faces       : 53
      number of nodes            : 104
@@ -2465,25 +2465,25 @@ Info for Grid Partition 40
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2495,7 +2495,7 @@ Info for Grid Partition 40
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 54
      number of nodes            : 72
@@ -2526,25 +2526,25 @@ Info for Grid Partition 41
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2556,7 +2556,7 @@ Info for Grid Partition 41
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 69
      number of quad faces       : 53
      number of nodes            : 119
@@ -2587,25 +2587,25 @@ Info for Grid Partition 42
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2617,7 +2617,7 @@ Info for Grid Partition 42
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 2
      number of quad faces       : 46
      number of nodes            : 65
@@ -2648,25 +2648,25 @@ Info for Grid Partition 43
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2678,7 +2678,7 @@ Info for Grid Partition 43
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 25
      number of nodes            : 37
@@ -2709,25 +2709,25 @@ Info for Grid Partition 44
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2739,7 +2739,7 @@ Info for Grid Partition 44
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 24
      number of quad faces       : 42
      number of nodes            : 70
@@ -2770,25 +2770,25 @@ Info for Grid Partition 45
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2800,7 +2800,7 @@ Info for Grid Partition 45
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 56
      number of quad faces       : 48
      number of nodes            : 99
@@ -2831,25 +2831,25 @@ Info for Grid Partition 46
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2861,7 +2861,7 @@ Info for Grid Partition 46
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 35
      number of nodes            : 49
@@ -2892,25 +2892,25 @@ Info for Grid Partition 47
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2922,7 +2922,7 @@ Info for Grid Partition 47
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 9
      number of nodes            : 16
@@ -2953,25 +2953,25 @@ Info for Grid Partition 48
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2983,7 +2983,7 @@ Info for Grid Partition 48
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 33
      number of quad faces       : 58
      number of nodes            : 104
@@ -3014,25 +3014,25 @@ Info for Grid Partition 49
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3044,7 +3044,7 @@ Info for Grid Partition 49
      number of nodes            : 31
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 44
      number of nodes            : 60
@@ -3075,25 +3075,25 @@ Info for Grid Partition 50
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3105,7 +3105,7 @@ Info for Grid Partition 50
      number of nodes            : 41
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 31
      number of quad faces       : 0
      number of nodes            : 25
@@ -3136,25 +3136,25 @@ Info for Grid Partition 51
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3166,7 +3166,7 @@ Info for Grid Partition 51
      number of nodes            : 27
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 53
      number of quad faces       : 45
      number of nodes            : 99
@@ -3197,25 +3197,25 @@ Info for Grid Partition 52
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3227,7 +3227,7 @@ Info for Grid Partition 52
      number of nodes            : 47
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 31
      number of nodes            : 45
@@ -3258,25 +3258,25 @@ Info for Grid Partition 53
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3288,7 +3288,7 @@ Info for Grid Partition 53
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 42
      number of quad faces       : 36
      number of nodes            : 84
@@ -3319,25 +3319,25 @@ Info for Grid Partition 54
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3349,7 +3349,7 @@ Info for Grid Partition 54
      number of nodes            : 54
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 43
      number of quad faces       : 17
      number of nodes            : 59
@@ -3380,25 +3380,25 @@ Info for Grid Partition 55
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3410,7 +3410,7 @@ Info for Grid Partition 55
      number of nodes            : 30
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 39
      number of quad faces       : 33
      number of nodes            : 76
@@ -3441,25 +3441,25 @@ Info for Grid Partition 56
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3471,7 +3471,7 @@ Info for Grid Partition 56
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 14
      number of quad faces       : 22
      number of nodes            : 49
@@ -3502,25 +3502,25 @@ Info for Grid Partition 57
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3532,7 +3532,7 @@ Info for Grid Partition 57
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 51
      number of quad faces       : 55
      number of nodes            : 110
@@ -3563,25 +3563,25 @@ Info for Grid Partition 58
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3593,7 +3593,7 @@ Info for Grid Partition 58
      number of nodes            : 6
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 26
      number of nodes            : 38
@@ -3624,25 +3624,25 @@ Info for Grid Partition 59
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3654,7 +3654,7 @@ Info for Grid Partition 59
      number of nodes            : 68
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 18
      number of quad faces       : 32
      number of nodes            : 61
@@ -3685,25 +3685,25 @@ Info for Grid Partition 60
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3715,7 +3715,7 @@ Info for Grid Partition 60
      number of nodes            : 20
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 65
      number of quad faces       : 48
      number of nodes            : 111
@@ -3746,25 +3746,25 @@ Info for Grid Partition 61
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3776,7 +3776,7 @@ Info for Grid Partition 61
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 62
      number of quad faces       : 36
      number of nodes            : 100
@@ -3807,25 +3807,25 @@ Info for Grid Partition 62
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3837,7 +3837,7 @@ Info for Grid Partition 62
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 63
      number of quad faces       : 19
      number of nodes            : 74
@@ -3868,25 +3868,25 @@ Info for Grid Partition 63
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3898,7 +3898,7 @@ Info for Grid Partition 63
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 1
      number of quad faces       : 62
      number of nodes            : 83
@@ -3929,25 +3929,25 @@ Info for Grid Partition 64
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3959,7 +3959,7 @@ Info for Grid Partition 64
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 61
      number of nodes            : 80
@@ -3990,25 +3990,25 @@ Info for Grid Partition 65
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4020,7 +4020,7 @@ Info for Grid Partition 65
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 35
      number of nodes            : 50
@@ -4051,25 +4051,25 @@ Info for Grid Partition 66
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4081,7 +4081,7 @@ Info for Grid Partition 66
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 62
      number of quad faces       : 32
      number of nodes            : 85
@@ -4112,25 +4112,25 @@ Info for Grid Partition 67
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4142,7 +4142,7 @@ Info for Grid Partition 67
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 68
      number of quad faces       : 54
      number of nodes            : 110
@@ -4173,25 +4173,25 @@ Info for Grid Partition 68
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4203,7 +4203,7 @@ Info for Grid Partition 68
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 32
      number of nodes            : 47
@@ -4234,25 +4234,25 @@ Info for Grid Partition 69
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4264,7 +4264,7 @@ Info for Grid Partition 69
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4295,25 +4295,25 @@ Info for Grid Partition 70
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4325,7 +4325,7 @@ Info for Grid Partition 70
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 30
      number of quad faces       : 59
      number of nodes            : 101
@@ -4356,25 +4356,25 @@ Info for Grid Partition 71
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4386,7 +4386,7 @@ Info for Grid Partition 71
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 3
      number of quad faces       : 34
      number of nodes            : 51
@@ -4417,25 +4417,25 @@ Info for Grid Partition 72
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4447,7 +4447,7 @@ Info for Grid Partition 72
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 31
      number of quad faces       : 25
      number of nodes            : 57
@@ -4478,25 +4478,25 @@ Info for Grid Partition 73
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4508,7 +4508,7 @@ Info for Grid Partition 73
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 49
      number of nodes            : 68
@@ -4539,25 +4539,25 @@ Info for Grid Partition 74
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4569,7 +4569,7 @@ Info for Grid Partition 74
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 28
      number of quad faces       : 33
      number of nodes            : 71
@@ -4600,25 +4600,25 @@ Info for Grid Partition 75
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4630,7 +4630,7 @@ Info for Grid Partition 75
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 26
      number of quad faces       : 41
      number of nodes            : 78
@@ -4661,25 +4661,25 @@ Info for Grid Partition 76
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4691,7 +4691,7 @@ Info for Grid Partition 76
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 40
      number of quad faces       : 52
      number of nodes            : 102
@@ -4722,25 +4722,25 @@ Info for Grid Partition 77
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4752,7 +4752,7 @@ Info for Grid Partition 77
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 44
      number of nodes            : 68
@@ -4783,25 +4783,25 @@ Info for Grid Partition 78
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4813,7 +4813,7 @@ Info for Grid Partition 78
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 44
      number of quad faces       : 45
      number of nodes            : 93
@@ -4844,25 +4844,25 @@ Info for Grid Partition 79
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4874,7 +4874,7 @@ Info for Grid Partition 79
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 36
      number of quad faces       : 37
      number of nodes            : 78
@@ -4905,25 +4905,25 @@ Info for Grid Partition 80
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 179
      number of quad faces       : 0
      number of nodes            : 109
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 17
      number of quad faces       : 0
      number of nodes            : 16
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4935,7 +4935,7 @@ Info for Grid Partition 80
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 23
      number of nodes            : 39
@@ -4966,25 +4966,25 @@ Info for Grid Partition 81
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 15
      number of quad faces       : 0
      number of nodes            : 14
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4996,7 +4996,7 @@ Info for Grid Partition 81
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 46
      number of nodes            : 63
@@ -5027,25 +5027,25 @@ Info for Grid Partition 82
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 40
      number of quad faces       : 0
      number of nodes            : 31
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 47
      number of quad faces       : 0
      number of nodes            : 35
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5057,7 +5057,7 @@ Info for Grid Partition 82
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 19
      number of quad faces       : 12
      number of nodes            : 32
@@ -5088,25 +5088,25 @@ Info for Grid Partition 83
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5118,7 +5118,7 @@ Info for Grid Partition 83
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 57
      number of nodes            : 78
@@ -5149,25 +5149,25 @@ Info for Grid Partition 84
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 124
      number of quad faces       : 0
      number of nodes            : 78
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 4
      number of quad faces       : 0
      number of nodes            : 6
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5179,7 +5179,7 @@ Info for Grid Partition 84
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 66
      number of quad faces       : 24
      number of nodes            : 83
@@ -5210,25 +5210,25 @@ Info for Grid Partition 85
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5240,7 +5240,7 @@ Info for Grid Partition 85
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 41
      number of nodes            : 56
@@ -5271,25 +5271,25 @@ Info for Grid Partition 86
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5301,7 +5301,7 @@ Info for Grid Partition 86
      number of nodes            : 43
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 45
      number of quad faces       : 43
      number of nodes            : 93
@@ -5332,25 +5332,25 @@ Info for Grid Partition 87
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5362,7 +5362,7 @@ Info for Grid Partition 87
      number of nodes            : 0
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 47
      number of quad faces       : 29
      number of nodes            : 77
@@ -5393,25 +5393,25 @@ Info for Grid Partition 88
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5423,7 +5423,7 @@ Info for Grid Partition 88
      number of nodes            : 24
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 36
      number of nodes            : 50
@@ -5454,25 +5454,25 @@ Info for Grid Partition 89
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 66
      number of quad faces       : 0
      number of nodes            : 48
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 111
      number of quad faces       : 0
      number of nodes            : 72
@@ -5484,7 +5484,7 @@ Info for Grid Partition 89
      number of nodes            : 50
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 31
      number of quad faces       : 22
      number of nodes            : 63
@@ -5515,25 +5515,25 @@ Info for Grid Partition 90
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5545,7 +5545,7 @@ Info for Grid Partition 90
      number of nodes            : 22
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 50
      number of quad faces       : 23
      number of nodes            : 71
@@ -5576,25 +5576,25 @@ Info for Grid Partition 91
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 157
      number of quad faces       : 0
      number of nodes            : 97
@@ -5606,7 +5606,7 @@ Info for Grid Partition 91
      number of nodes            : 43
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 23
      number of nodes            : 37
@@ -5637,25 +5637,25 @@ Info for Grid Partition 92
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 69
      number of quad faces       : 0
      number of nodes            : 46
@@ -5667,7 +5667,7 @@ Info for Grid Partition 92
      number of nodes            : 25
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 45
      number of quad faces       : 19
      number of nodes            : 63
@@ -5698,25 +5698,25 @@ Info for Grid Partition 93
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 60
      number of quad faces       : 0
      number of nodes            : 43
@@ -5728,7 +5728,7 @@ Info for Grid Partition 93
      number of nodes            : 32
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 70
      number of quad faces       : 31
      number of nodes            : 93
@@ -5759,25 +5759,25 @@ Info for Grid Partition 94
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5789,7 +5789,7 @@ Info for Grid Partition 94
      number of nodes            : 5
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 68
      number of quad faces       : 38
      number of nodes            : 102
@@ -5820,25 +5820,25 @@ Info for Grid Partition 95
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5850,7 +5850,7 @@ Info for Grid Partition 95
      number of nodes            : 31
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 16
      number of nodes            : 26
@@ -5881,25 +5881,25 @@ Info for Grid Partition 96
      number of nodes            : 0
  
    boundary info for boundary 3
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 4
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 5
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5911,7 +5911,7 @@ Info for Grid Partition 96
      number of nodes            : 65
  
    boundary info for boundary 8
-     boundary condition         : tangency (3000)
+     boundary condition         : viscous_solid (4000)
      number of tria faces       : 18
      number of quad faces       : 30
      number of nodes            : 58
