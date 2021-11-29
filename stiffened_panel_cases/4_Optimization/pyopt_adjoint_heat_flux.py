@@ -114,7 +114,7 @@ class wedge_adjoint(object):
         #plate.add_variable('structural',Variable('thickness',value=thickness,lower = 0.01, upper = 0.1))
         model.add_body(plate)
 
-        steady = Scenario('steady', group=0, steps=2)
+        steady = Scenario('steady', group=0, steps=100)
         #steady.set_variable('aerodynamic',name='AOA',value=0.0,lower=-15.0,upper=15.0)
         temp = Function('ksfailure',analysis_type='structural') #temperature
         steady.add_function(temp)
@@ -157,30 +157,29 @@ class wedge_adjoint(object):
     def objFunc(self, xdict):
 
         tInput = xdict["xvars"]
-        functions = self.functions
+        self.driver.solve_forward()
+        functions = self.model.get_functions()
 
         funcs = {}
-        print('KSFAILURE: functions[0].value', functions[0].value)
-        print('MASS: functions[1].value', functions[1].value)
         funcs["obj"] = functions[0].value
         funcs["con"] = functions[1].value
 
         fail = False
+
+        if self.comm.rank == 0:
+            print(tInput) 
 
         return funcs, fail
 
     def objGrad(self, xdict, funcs): 
 
         tInput = xdict["xvars"]
-        grads = self.grads
+
+        self.driver.solve_adjoint()
+        grads = self.model.get_function_gradients()
 
         grad1 = np.array(grads[0][:])
         grad2 = np.array(grads[1][:])
-
-        print('grad1', grad1)
-        print('grad2', grad2)
-        print('grad11', grad1[2:])
-        print('grad22', grad2[2:])
 
         sens = {}
         sens = {
@@ -200,12 +199,12 @@ class wedge_adjoint(object):
 dp = wedge_adjoint(analysis_type='aerothermoelastic') # 'aeroelastic') # 'aerothermoelastic') # 'aerothermal')
 print('Created Object')
 
-dp.total_derivative()
+#dp.total_derivative()
 
 optProb = Optimization("Stiffened Panel Aerothermoelastic Optimization", dp.objFunc)
 
 optProb.addVarGroup("xvars", 112, "c", lower=0.001*np.ones(112), upper=0.1*np.ones(112), value=0.01)
-optProb.addConGroup("con", 1, lower=6.8e-1, upper=6.8e-1)
+optProb.addConGroup("con", 1, lower=33.4, upper=33.4)
 optProb.addObj("obj")
 
 print(optProb)
@@ -214,4 +213,6 @@ optOptions = {"IPRINT": -1}
 opt = SLSQP(options=optOptions)
 sol = opt(optProb, sens=dp.objGrad, storeHistory='opt_history.hst')
 
-print(sol)
+comm = MPI.COMM_WORLD
+if comm.rank == 0:
+    print(sol)
