@@ -107,7 +107,7 @@ class wedge_adjoint(object):
 
         steady = Scenario('steady', group=0, steps=100)
         steady.set_variable('aerodynamic',name='AOA',value=0.0,lower=-15.0,upper=15.0)
-        temp = Function('temperature',analysis_type='structural') #temperature
+        temp = Function('ksfailure',analysis_type='structural') #temperature
         steady.add_function(temp)
 
         #lift = Function('cl',analysis_type='aerodynamic')
@@ -243,7 +243,7 @@ class wedge_adjoint(object):
         
 
 ################################################################################
-dp = wedge_adjoint(analysis_type='aerothermoelastic') # 'aeroelastic') # 'aerothermoelastic') # 'aerothermal')
+dp = wedge_adjoint(analysis_type='aerothermal') # 'aeroelastic') # 'aerothermoelastic') # 'aerothermal')
 print('created object')
 
 # print('VERIFICATION TEST')

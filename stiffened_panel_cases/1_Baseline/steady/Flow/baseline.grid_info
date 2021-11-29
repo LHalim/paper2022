@@ -42,7 +42,7 @@ Global Grid Info
      number of nodes            : 185
  
    boundary info for boundary6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 322
      number of quad faces       : 0
      number of nodes            : 182
@@ -104,7 +104,7 @@ Info for Grid Partition 1
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -165,7 +165,7 @@ Info for Grid Partition 2
      number of nodes            : 52
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -226,7 +226,7 @@ Info for Grid Partition 3
      number of nodes            : 60
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -287,7 +287,7 @@ Info for Grid Partition 4
      number of nodes            : 54
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -348,7 +348,7 @@ Info for Grid Partition 5
      number of nodes            : 80
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -409,7 +409,7 @@ Info for Grid Partition 6
      number of nodes            : 38
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -470,7 +470,7 @@ Info for Grid Partition 7
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -531,7 +531,7 @@ Info for Grid Partition 8
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -592,7 +592,7 @@ Info for Grid Partition 9
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -653,7 +653,7 @@ Info for Grid Partition 10
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -714,7 +714,7 @@ Info for Grid Partition 11
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -775,7 +775,7 @@ Info for Grid Partition 12
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -836,7 +836,7 @@ Info for Grid Partition 13
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -897,7 +897,7 @@ Info for Grid Partition 14
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -958,7 +958,7 @@ Info for Grid Partition 15
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1019,7 +1019,7 @@ Info for Grid Partition 16
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1080,7 +1080,7 @@ Info for Grid Partition 17
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1141,7 +1141,7 @@ Info for Grid Partition 18
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1202,7 +1202,7 @@ Info for Grid Partition 19
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1263,7 +1263,7 @@ Info for Grid Partition 20
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1324,7 +1324,7 @@ Info for Grid Partition 21
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1385,7 +1385,7 @@ Info for Grid Partition 22
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1446,7 +1446,7 @@ Info for Grid Partition 23
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1507,7 +1507,7 @@ Info for Grid Partition 24
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1568,7 +1568,7 @@ Info for Grid Partition 25
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1629,7 +1629,7 @@ Info for Grid Partition 26
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1690,7 +1690,7 @@ Info for Grid Partition 27
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1751,7 +1751,7 @@ Info for Grid Partition 28
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1812,7 +1812,7 @@ Info for Grid Partition 29
      number of nodes            : 13
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1873,7 +1873,7 @@ Info for Grid Partition 30
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1934,7 +1934,7 @@ Info for Grid Partition 31
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -1995,7 +1995,7 @@ Info for Grid Partition 32
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2056,7 +2056,7 @@ Info for Grid Partition 33
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2117,7 +2117,7 @@ Info for Grid Partition 34
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2178,7 +2178,7 @@ Info for Grid Partition 35
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2239,7 +2239,7 @@ Info for Grid Partition 36
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2300,7 +2300,7 @@ Info for Grid Partition 37
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2361,7 +2361,7 @@ Info for Grid Partition 38
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2422,7 +2422,7 @@ Info for Grid Partition 39
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2483,7 +2483,7 @@ Info for Grid Partition 40
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2544,7 +2544,7 @@ Info for Grid Partition 41
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2605,7 +2605,7 @@ Info for Grid Partition 42
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2666,7 +2666,7 @@ Info for Grid Partition 43
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2727,7 +2727,7 @@ Info for Grid Partition 44
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2788,7 +2788,7 @@ Info for Grid Partition 45
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2849,7 +2849,7 @@ Info for Grid Partition 46
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2910,7 +2910,7 @@ Info for Grid Partition 47
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -2971,7 +2971,7 @@ Info for Grid Partition 48
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3032,7 +3032,7 @@ Info for Grid Partition 49
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3093,7 +3093,7 @@ Info for Grid Partition 50
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3154,7 +3154,7 @@ Info for Grid Partition 51
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3215,7 +3215,7 @@ Info for Grid Partition 52
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3276,7 +3276,7 @@ Info for Grid Partition 53
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3337,7 +3337,7 @@ Info for Grid Partition 54
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3398,7 +3398,7 @@ Info for Grid Partition 55
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3459,7 +3459,7 @@ Info for Grid Partition 56
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3520,7 +3520,7 @@ Info for Grid Partition 57
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3581,7 +3581,7 @@ Info for Grid Partition 58
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3642,7 +3642,7 @@ Info for Grid Partition 59
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3703,7 +3703,7 @@ Info for Grid Partition 60
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3764,7 +3764,7 @@ Info for Grid Partition 61
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3825,7 +3825,7 @@ Info for Grid Partition 62
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3886,7 +3886,7 @@ Info for Grid Partition 63
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -3947,7 +3947,7 @@ Info for Grid Partition 64
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4008,7 +4008,7 @@ Info for Grid Partition 65
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4069,7 +4069,7 @@ Info for Grid Partition 66
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4130,7 +4130,7 @@ Info for Grid Partition 67
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4191,7 +4191,7 @@ Info for Grid Partition 68
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4252,7 +4252,7 @@ Info for Grid Partition 69
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4313,7 +4313,7 @@ Info for Grid Partition 70
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4374,7 +4374,7 @@ Info for Grid Partition 71
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4435,7 +4435,7 @@ Info for Grid Partition 72
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4496,7 +4496,7 @@ Info for Grid Partition 73
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4557,7 +4557,7 @@ Info for Grid Partition 74
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4618,7 +4618,7 @@ Info for Grid Partition 75
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4679,7 +4679,7 @@ Info for Grid Partition 76
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4740,7 +4740,7 @@ Info for Grid Partition 77
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4801,7 +4801,7 @@ Info for Grid Partition 78
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4862,7 +4862,7 @@ Info for Grid Partition 79
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4923,7 +4923,7 @@ Info for Grid Partition 80
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -4984,7 +4984,7 @@ Info for Grid Partition 81
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5045,7 +5045,7 @@ Info for Grid Partition 82
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5106,7 +5106,7 @@ Info for Grid Partition 83
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5167,7 +5167,7 @@ Info for Grid Partition 84
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5228,7 +5228,7 @@ Info for Grid Partition 85
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5289,7 +5289,7 @@ Info for Grid Partition 86
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5350,7 +5350,7 @@ Info for Grid Partition 87
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5411,7 +5411,7 @@ Info for Grid Partition 88
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5472,7 +5472,7 @@ Info for Grid Partition 89
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 111
      number of quad faces       : 0
      number of nodes            : 72
@@ -5533,7 +5533,7 @@ Info for Grid Partition 90
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5594,7 +5594,7 @@ Info for Grid Partition 91
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 157
      number of quad faces       : 0
      number of nodes            : 97
@@ -5655,7 +5655,7 @@ Info for Grid Partition 92
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 69
      number of quad faces       : 0
      number of nodes            : 46
@@ -5716,7 +5716,7 @@ Info for Grid Partition 93
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 60
      number of quad faces       : 0
      number of nodes            : 43
@@ -5777,7 +5777,7 @@ Info for Grid Partition 94
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5838,7 +5838,7 @@ Info for Grid Partition 95
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
@@ -5899,7 +5899,7 @@ Info for Grid Partition 96
      number of nodes            : 0
  
    boundary info for boundary 6
-     boundary condition         : tangency (3000)
+     boundary condition         : symmetry_y (6662)
      number of tria faces       : 0
      number of quad faces       : 0
      number of nodes            : 0
