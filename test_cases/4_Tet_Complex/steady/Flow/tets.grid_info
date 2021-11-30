@@ -1,0 +1,236 @@
+Global Grid Info
+----------------
+ 
+   number of tet cells : 778
+ 
+   number of nodes     : 213
+ 
+   number of edges     : 1132
+ 
+   number of boundaries: 6
+ 
+   boundary info for boundary1
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 46
+     number of quad faces       : 0
+     number of nodes            : 32
+ 
+   boundary info for boundary2
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 48
+     number of quad faces       : 0
+     number of nodes            : 33
+ 
+   boundary info for boundary3
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 48
+     number of quad faces       : 0
+     number of nodes            : 33
+ 
+   boundary info for boundary4
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 46
+     number of quad faces       : 0
+     number of nodes            : 32
+ 
+   boundary info for boundary5
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 48
+     number of quad faces       : 0
+     number of nodes            : 33
+ 
+   boundary info for boundary6
+     boundary condition         : viscous_solid (4000)
+     number of tria faces       : 48
+     number of quad faces       : 0
+     number of nodes            : 33
+ 
+ 
+Info for Grid Partition 1
+---------------------------
+ 
+   number of tet level 1  cells : 275
+ 
+   number of     level 0  nodes : 54
+   number of     level 1  nodes : 41
+ 
+   number of     level 0  edges : 345
+   number of     level 01 edges : 444
+ 
+   boundary info for boundary 1
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 34
+     number of quad faces       : 0
+     number of nodes            : 26
+ 
+   boundary info for boundary 2
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 3
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 26
+     number of quad faces       : 0
+     number of nodes            : 21
+ 
+   boundary info for boundary 4
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 4
+     number of quad faces       : 0
+     number of nodes            : 6
+ 
+   boundary info for boundary 5
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 6
+     boundary condition         : viscous_solid (4000)
+     number of tria faces       : 27
+     number of quad faces       : 0
+     number of nodes            : 21
+ 
+Info for Grid Partition 2
+---------------------------
+ 
+   number of tet level 1  cells : 276
+ 
+   number of     level 0  nodes : 54
+   number of     level 1  nodes : 41
+ 
+   number of     level 0  edges : 345
+   number of     level 01 edges : 445
+ 
+   boundary info for boundary 1
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 2
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 3
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 32
+     number of quad faces       : 0
+     number of nodes            : 24
+ 
+   boundary info for boundary 4
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 22
+     number of quad faces       : 0
+     number of nodes            : 18
+ 
+   boundary info for boundary 5
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 29
+     number of quad faces       : 0
+     number of nodes            : 23
+ 
+   boundary info for boundary 6
+     boundary condition         : viscous_solid (4000)
+     number of tria faces       : 7
+     number of quad faces       : 0
+     number of nodes            : 8
+ 
+Info for Grid Partition 3
+---------------------------
+ 
+   number of tet level 1  cells : 276
+ 
+   number of     level 0  nodes : 54
+   number of     level 1  nodes : 44
+ 
+   number of     level 0  edges : 345
+   number of     level 01 edges : 453
+ 
+   boundary info for boundary 1
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 25
+     number of quad faces       : 0
+     number of nodes            : 21
+ 
+   boundary info for boundary 2
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 34
+     number of quad faces       : 0
+     number of nodes            : 25
+ 
+   boundary info for boundary 3
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 1
+     number of quad faces       : 0
+     number of nodes            : 3
+ 
+   boundary info for boundary 4
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 29
+     number of quad faces       : 0
+     number of nodes            : 22
+ 
+   boundary info for boundary 5
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 6
+     boundary condition         : viscous_solid (4000)
+     number of tria faces       : 7
+     number of quad faces       : 0
+     number of nodes            : 8
+ 
+Info for Grid Partition 4
+---------------------------
+ 
+   number of tet level 1  cells : 259
+ 
+   number of     level 0  nodes : 51
+   number of     level 1  nodes : 40
+ 
+   number of     level 0  edges : 326
+   number of     level 01 edges : 421
+ 
+   boundary info for boundary 1
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 2
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 25
+     number of quad faces       : 0
+     number of nodes            : 21
+ 
+   boundary info for boundary 3
+     boundary condition         : symmetry_y (6662)
+     number of tria faces       : 0
+     number of quad faces       : 0
+     number of nodes            : 0
+ 
+   boundary info for boundary 4
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 7
+     number of quad faces       : 0
+     number of nodes            : 8
+ 
+   boundary info for boundary 5
+     boundary condition         : farfield_riem (5000)
+     number of tria faces       : 31
+     number of quad faces       : 0
+     number of nodes            : 24
+ 
+   boundary info for boundary 6
+     boundary condition         : viscous_solid (4000)
+     number of tria faces       : 25
+     number of quad faces       : 0
+     number of nodes            : 20
+ 
