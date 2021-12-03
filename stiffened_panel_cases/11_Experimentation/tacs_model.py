@@ -35,10 +35,8 @@ class wedgeTACS(TacsSteadyInterface):
             cte = 24.0e-6
             kappa = 230.0
 
-
-
             # tInput = 0.001*np.ones(112)
-            # softPanelT = np.array([0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001])
+
             softPanelT = 0.001*np.ones(6)
             tInput2 = self.symmetryIndex(softPanelT)
             tInput3= self.designIndex(tInput2)
@@ -67,27 +65,24 @@ class wedgeTACS(TacsSteadyInterface):
                 scale = [100.0]
                 return elemList, scale
 
-            # Set up elements and TACS assembler
-            FEASolver.initialize(elemCallBack)
-            assembler = FEASolver.assembler
+            # # Set up elements and TACS assembler
+            # FEASolver.initialize(elemCallBack)
+            # assembler = FEASolver.assembler
 
             # # Add back pressure
             # forces = assembler.createVec()
             # force_array = forces.getArray()
-            
+
             # # Panel pressure loading
-            # force_array[2::7] += 0.05*np.cos(np.radians(5))
-            # force_array[0::7] += -0.05*np.sin(np.radians(5))
+            # force_array[2::7] += 0.005*np.cos(np.radians(5))
+            # force_array[0::7] += -0.005*np.sin(np.radians(5))
             
             # assembler.setBCs(forces)
-
-
-
 
         self._initialize_variables(assembler, thermal_index=6)
 
         self.initialize(model.scenarios[0],model.bodies)
-
+    
     # CAPS group assigments are all jumbled up. This maps them properly
     # First 8 indexes represent plate segments perpendicular to stiffeners
     # Last 4 indexes represent stiffener segments
@@ -125,7 +120,7 @@ class wedgeTACS(TacsSteadyInterface):
         return xOutput
 
 
-    
+
     def post_export_f5(self):
         flag = (TACS.OUTPUT_CONNECTIVITY |
                 TACS.OUTPUT_NODES |

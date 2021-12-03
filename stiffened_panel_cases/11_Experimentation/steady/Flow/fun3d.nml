@@ -4,7 +4,7 @@
 &raw_grid
   grid_format = 'aflr3'
   data_format = 'default'
-  swap_yz_axes = .false.
+  swap_yz_axes = .true.
 /
 &governing_equations
   eqn_type      = 'compressible'
@@ -37,13 +37,13 @@
   schedule_cflturb(1:2) = 50.0,50.0
 /
 &elasticity_gmres
-  ! nsearch = 200
-  tol = 1.e-14
-  ! deform_from_initial_mesh = .true.
+  nsearch = 200
+  tol = 1.e-3
+  deform_from_initial_mesh = .true.
+
 /
 &global
   moving_grid = .true.
-  ! volume_animation_freq = 100
 /
 &slice_data
   nslices       = 1
@@ -52,13 +52,4 @@
 /
 &massoud_output
   funtofem_include_skin_friction = .true.
-/
-&volume_output_variables
-  export_to ='vtk'
-  x = .false.
-  y = .false.
-  z = .false.
-  temperature = .true.
-  mach = .true.
-  p = .true.
 /

@@ -11,7 +11,7 @@
   viscous_terms = 'laminar'
 /
 &reference_physical_properties
-  mach_number     = 6.0
+  mach_number     = 0.5
   angle_of_attack = 0.0
   reynolds_number = 1.357e4
   temperature     = 300.0
@@ -37,13 +37,15 @@
   schedule_cflturb(1:2) = 50.0,50.0
 /
 &elasticity_gmres
-  ! nsearch = 200
+  nsearch = 200
   tol = 1.e-6
-  ! deform_from_initial_mesh = .true.
+  deform_from_initial_mesh = .true.
 /
 &global
   moving_grid = .true.
   volume_animation_freq = 100
+  boundary_animation_freq = 100
+
 /
 &slice_data
   nslices       = 1
@@ -61,4 +63,10 @@
   temperature = .true.
   mach = .true.
   p = .true.
+/
+&boundary_output_variables
+  number_of_boundaries = -1
+  boundary_list        = '1-8'
+  temperature          = .true.
+  mach                 = .true.
 /

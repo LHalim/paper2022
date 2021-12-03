@@ -173,11 +173,9 @@ class wedge_adjoint(object):
         return xOutput
 
     def _build_model(self):
-        
+
         # thickness = 0.001
 
-        # tInput = 0.001*np.ones(112)
-        # softPanelT = np.array([0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001])
         softPanelT = 0.001*np.ones(6)
         tInput2 = self.symmetryIndex(softPanelT)
         tInput3= self.designIndex(tInput2)
@@ -193,7 +191,7 @@ class wedge_adjoint(object):
         #plate.add_variable('structural',Variable('thickness',value=thickness,lower = 0.01, upper = 0.1))
         model.add_body(plate)
 
-        steady = Scenario('steady', group=0, steps=2)
+        steady = Scenario('steady', group=0, steps=3)
         #steady.set_variable('aerodynamic',name='AOA',value=0.0,lower=-15.0,upper=15.0)
         temp = Function('ksfailure',analysis_type='structural') #temperature
         steady.add_function(temp)
@@ -284,11 +282,9 @@ dp = wedge_adjoint(analysis_type='aerothermoelastic') # 'aeroelastic') # 'aeroth
 
 
 optProb = Optimization("Stiffened Panel Aerothermoelastic Optimization", dp.objFunc)
-
-# softPanelT = np.array([0.001, 0.001, 0.001, 0.001, 0.0001, 0.0001])
 softPanelT = 0.001*np.ones(6)
-optProb.addVarGroup("xvars", 6, "c", lower=0.25*softPanelT, upper=4*softPanelT, value=softPanelT)
-optProb.addConGroup("con", 1, lower=2.80, upper=2.80)
+optProb.addVarGroup("xvars", 6, "c", lower=0.1*softPanelT, upper=10*softPanelT, value=softPanelT)
+optProb.addConGroup("con", 1, lower=3, upper=4)
 optProb.addObj("obj")
 
 comm = MPI.COMM_WORLD
@@ -298,6 +294,7 @@ if comm.rank == 0:
 optOptions = {"IPRINT": -1}
 opt = SLSQP(options=optOptions)
 sol = opt(optProb, sens=dp.objGrad)
+# sol = opt(optProb, sens="FD")
 
 if comm.rank == 0:
     print(sol)
