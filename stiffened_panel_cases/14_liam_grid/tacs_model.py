@@ -35,7 +35,7 @@ class wedgeTACS(TacsSteadyInterface):
             cte = 24.0e-6
             kappa = 230.0
 
-            tInput = 0.0001*np.ones(112)
+            tInput = 0.001*np.ones(112)
 
             def elemCallBack(dvNum, compID, compDescript, elemDescripts, globalDVs, **kwargs):
                 elemIndex = kwargs['propID'] - 1

@@ -174,7 +174,7 @@ class wedge_adjoint(object):
 
     def _build_model(self):
 
-        thickness = 0.0001
+        thickness = 0.001
 
         # Build the model
         model = FUNtoFEMmodel('wedge')
@@ -186,7 +186,7 @@ class wedge_adjoint(object):
         #plate.add_variable('structural',Variable('thickness',value=thickness,lower = 0.01, upper = 0.1))
         model.add_body(plate)
 
-        steady = Scenario('steady', group=0, steps=5)
+        steady = Scenario('steady', group=0, steps=20)
         #steady.set_variable('aerodynamic',name='AOA',value=0.0,lower=-15.0,upper=15.0)
         temp = Function('ksfailure',analysis_type='structural') #temperature
         steady.add_function(temp)
@@ -218,11 +218,11 @@ class wedge_adjoint(object):
         funcs["obj"] = functions[0].value
         funcs["con"] = functions[1].value
 
-        if self.comm.rank == 0:
-            print('\n---------- FUNCTION SOLVE ----------')
-            print('\nDesign Vars:       ', tInput1) 
-            print('\nObjective Value:   ', functions[0].value)
-            print('\nConstraint Value:  ', functions[1].value)
+        # if self.comm.rank == 0:
+        print('\n---------- FUNCTION SOLVE ----------')
+        print('\nDesign Vars:       ', tInput1) 
+        print('\nObjective Value:   ', functions[0].value)
+        print('\nConstraint Value:  ', functions[1].value)
 
         fail = False
 
@@ -249,11 +249,11 @@ class wedge_adjoint(object):
         grad2_3 = self.revDesignIndex(grad2_2)
         grad2_4 = self.revSymmetryIndex(grad2_3)
 
-        if self.comm.rank == 0:
-            print('\n---------- GRADIENT SOLVE ----------')
-            print('\nDesign Vars:            ', tInput1) 
-            print('\nObjective Grad Value:   ', grad1_4)
-            print('\nConstraint Grad Value:  ', grad2_4)
+        # if self.comm.rank == 0:
+        print('\n---------- GRADIENT SOLVE ----------')
+        print('\nDesign Vars:            ', tInput1) 
+        print('\nObjective Grad Value:   ', grad1_4)
+        print('\nConstraint Grad Value:  ', grad2_4)
 
         sens = {}
         sens = {
@@ -279,20 +279,21 @@ print('Created Object')
 
 optProb = Optimization("Stiffened Panel Aerothermoelastic Optimization", dp.objFunc)
 
-optProb.addVarGroup("xvars", 6, "c", lower=0.00001*np.ones(6), upper=0.001*np.ones(6), value=0.0001)
+optProb.addVarGroup("xvars", 6, "c", lower=0.0001*np.ones(6), upper=0.01*np.ones(6), value=0.001)
 # optProb.addVarGroup("xvars", 6, "c", lower=0.01*np.ones(6), upper=1*np.ones(6), value=0.1)
 
-optProb.addConGroup("con", 1, lower=0.3, upper=0.4)
+optProb.addConGroup("con", 1, lower=3, upper=4)
 # optProb.addConGroup("con", 1, lower=300, upper=400)
 optProb.addObj("obj")
 
 comm = MPI.COMM_WORLD
-if comm.rank == 0:
-    print(optProb)
+# if comm.rank == 0:
+print(optProb)
 
 optOptions = {"IPRINT": -1}
 opt = SLSQP(options=optOptions)
 sol = opt(optProb, sens=dp.objGrad)
 
-if comm.rank == 0:
-    print(sol)
+# if comm.rank == 0:
+print(sol)
+print('sol.xStar:  ', sol.xStar)
