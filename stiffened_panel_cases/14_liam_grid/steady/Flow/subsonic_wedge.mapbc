@@ -1,0 +1,10 @@
+           9
+      1   3000      body_downstream
+      2   3000      body_upstream
+      3   5000      farfield
+      4   5000      inflow
+      5   5000      outflow
+      6   3000      panel
+      7   6662      sym_neg
+      8   6662      sym_pos
+      9   6663      sym_z
