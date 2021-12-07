@@ -4,3 +4,6 @@
 *.b8.ugrid
 run.pbs.*
 opt.out
+*.flow
+*.forces
+*.txt
