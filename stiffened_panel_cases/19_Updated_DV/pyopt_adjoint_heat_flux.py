@@ -219,11 +219,8 @@ print('Created Object')
 
 optProb = Optimization("Stiffened Panel Aerothermoelastic Optimization", dp.objFunc)
 
-# optProb.addVarGroup("xvars", 12, "c", lower=0.0001*np.ones(12), upper=0.01*np.ones(12), value=0.001)
-optProb.addVarGroup("xvars", 12, "c", lower=0.0001*np.ones(12), upper=0.01*np.ones(12), value=0.001*np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3]))
+optProb.addVarGroup("xvars", 12, "c", lower=0.0001*np.ones(12), upper=0.01*np.ones(12), value=0.001)
 
-
-# optProb.addConGroup("con", 1, lower=3, upper=4)
 optProb.addConGroup("con", 1, lower=1, upper=1)
 optProb.addObj("obj")
 
