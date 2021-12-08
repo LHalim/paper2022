@@ -97,7 +97,7 @@ class wedge_adjoint(object):
         self.var_scale        = np.ones(self.ndv,dtype=TransferScheme.dtype)
         self.struct_tacs = solvers['structural'].assembler
 
-        self.ks_scale = 0.0126
+        self.ks_scale = 0.00660
         self.mass_scale = 3.35
 
         self.optHist = open('optHist.txt', 'w')
@@ -119,7 +119,7 @@ class wedge_adjoint(object):
         model.add_body(plate)
 
         steady = Scenario('steady', group=0, steps=50)
-        temp = Function('ksfailure',analysis_type='structural') # Objective
+        temp = Function('temperature',analysis_type='structural') # Objective
         steady.add_function(temp)
 
         mass = Function('mass',analysis_type='structural',adjoint=False) # Constraint

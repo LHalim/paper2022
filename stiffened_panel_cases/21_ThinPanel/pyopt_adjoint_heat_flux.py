@@ -97,8 +97,8 @@ class wedge_adjoint(object):
         self.var_scale        = np.ones(self.ndv,dtype=TransferScheme.dtype)
         self.struct_tacs = solvers['structural'].assembler
 
-        self.ks_scale = 0.0126
-        self.mass_scale = 3.35
+        self.ks_scale = 0.01079
+        self.mass_scale = 3.35/4
 
         self.optHist = open('optHist.txt', 'w')
         self.optHistAll = open('optHistAll.txt', 'w')
@@ -107,7 +107,7 @@ class wedge_adjoint(object):
 
     def _build_model(self):
 
-        thickness = 0.001
+        thickness = 0.001/4
 
         # Build the model
         model = FUNtoFEMmodel('wedge')
@@ -219,7 +219,7 @@ print('Created Object')
 
 optProb = Optimization("Stiffened Panel Aerothermoelastic Optimization", dp.objFunc)
 
-optProb.addVarGroup("xvars", 12, "c", lower=0.0001*np.ones(12), upper=0.01*np.ones(12), value=0.001)
+optProb.addVarGroup("xvars", 12, "c", lower=0.0001*np.ones(12)/4, upper=0.01*np.ones(12)/4, value=0.001/4)
 
 optProb.addConGroup("con", 1, lower=1, upper=1)
 optProb.addObj("obj")
