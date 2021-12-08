@@ -78,7 +78,7 @@ class wedgeTACS(TacsSteadyInterface):
 
         self.initialize(model.scenarios[0],model.bodies)
 
-    def post_export_f5(self, step=0):
+    def post_export_f5(self):
         flag = (TACS.OUTPUT_CONNECTIVITY |
                 TACS.OUTPUT_NODES |
                 TACS.OUTPUT_DISPLACEMENTS |
@@ -86,4 +86,4 @@ class wedgeTACS(TacsSteadyInterface):
                 TACS.OUTPUT_STRESSES |
                 TACS.OUTPUT_EXTRAS)
         f5 = TACS.ToFH5(self.assembler, TACS.BEAM_OR_SHELL_ELEMENT, flag)
-        f5.writeToFile('stiffPanel%d.f5'%(step))
+        f5.writeToFile('stiffPanel.f5')

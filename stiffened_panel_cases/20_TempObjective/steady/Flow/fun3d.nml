@@ -14,7 +14,7 @@
   mach_number     = 0.5
   angle_of_attack = 0.0
   reynolds_number = 1.357e4
-  temperature     = 300.0
+  temperature     = 350.0
   temperature_units = 'Kelvin'
 /
 &inviscid_flux_method

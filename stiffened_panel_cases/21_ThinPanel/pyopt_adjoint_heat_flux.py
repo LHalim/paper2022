@@ -97,8 +97,8 @@ class wedge_adjoint(object):
         self.var_scale        = np.ones(self.ndv,dtype=TransferScheme.dtype)
         self.struct_tacs = solvers['structural'].assembler
 
-        self.ks_scale = 0.01079
-        self.mass_scale = 3.35/4
+        self.obj_scale = 0.01079
+        self.con_scale = 3.35/4
 
         self.optHist = open('optHist.txt', 'w')
         self.optHistAll = open('optHistAll.txt', 'w')
@@ -138,8 +138,8 @@ class wedge_adjoint(object):
         self.driver.solve_forward()
         functions = self.model.get_functions()
 
-        func1 = functions[0].value * 1.0/self.ks_scale
-        func2 = functions[1].value * 1.0/self.mass_scale
+        func1 = functions[0].value * 1.0/self.obj_scale
+        func2 = functions[1].value * 1.0/self.con_scale
 
         funcs = {}
         funcs["obj"] = func1
@@ -175,8 +175,8 @@ class wedge_adjoint(object):
         self.driver.solve_adjoint()
         grads = self.model.get_function_gradients()
 
-        grad1 = np.array(grads[0][:]) * 1.0/self.ks_scale
-        grad2 = np.array(grads[1][:]) * 1.0/self.mass_scale
+        grad1 = np.array(grads[0][:]) * 1.0/self.obj_scale
+        grad2 = np.array(grads[1][:]) * 1.0/self.con_scale
 
         sens = {}
         sens = {
