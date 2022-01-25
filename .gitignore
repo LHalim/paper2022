@@ -7,3 +7,4 @@ opt.out
 *.flow
 *.forces
 *.txt
+*.o*

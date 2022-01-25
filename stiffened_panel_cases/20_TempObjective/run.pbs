@@ -3,8 +3,9 @@
 #PBS -A AFVAW00262F03
 #PBS -q main
 #PBS -l select=4:ncpus=48:mpiprocs=48
-#PBS -l walltime=02:00:00
+#PBS -l walltime=16:00:00
 #PBS -j oe
+#PBS -N 20_TempObjective
 #
 ## Optional Directives ------------------------------------
 #PBS -M ssahu32@gatech.edu

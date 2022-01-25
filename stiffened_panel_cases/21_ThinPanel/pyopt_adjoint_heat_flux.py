@@ -114,7 +114,7 @@ class wedge_adjoint(object):
         plate = Body('plate', analysis_type=self.analysis_type, group=0,boundary=1)
 
         for i in range(self.num_tacs_dvs):
-            plate.add_variable('structural',Variable('thickness '+ str(i),value=thickness,lower = 0.0001, upper = 0.01))
+            plate.add_variable('structural',Variable('thickness '+ str(i),value=thickness,lower = 0.00001, upper = 0.01))
 
         model.add_body(plate)
 
